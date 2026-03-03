@@ -22,6 +22,18 @@ sky = SubResource("Sky_f6slu")
 ambient_light_color = Color(0.9165067, 0.40253493, 0.22563845, 1)
 tonemap_mode = 2
 glow_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.2, 0.2, 0.2, 1)
+fog_light_energy = 2.6
+fog_density = 1.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.0415
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 0.0
+volumetric_fog_anisotropy = 0.9
+volumetric_fog_length = 50.85
+volumetric_fog_detail_spread = 0.5
+volumetric_fog_sky_affect = 0.435
 
 [sub_resource type="BoxMesh" id="BoxMesh_fr3la"]
 material = ExtResource("3_pkws4")
@@ -62,12 +74,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8451896, 0.4927431, -3.6000
 mesh = ExtResource("2_fr3la")
 
 [node name="Cube3" type="MeshInstance3D" parent="." unique_id=1071823716]
-transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 1.0451895, 1.092743, -10.6)
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 5.045, 1, -4.6)
 mesh = SubResource("BoxMesh_fr3la")
 surface_material_override/0 = ExtResource("3_pkws4")
 
 [node name="Cube2" type="MeshInstance3D" parent="." unique_id=1734554414]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0951896, 0.4927431, -3.6000001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0951896, 0.4927431, -5.6000004)
 mesh = SubResource("BoxMesh_f6slu")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=999468880]
@@ -106,3 +118,10 @@ mesh = SubResource("PlaneMesh_avkje")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=357846729]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_gr51b")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1672833541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0)
+light_color = Color(0.19383883, 0.512639, 1, 1)
+light_energy = 35.295
+light_indirect_energy = 2.389
+light_volumetric_fog_energy = 16.0

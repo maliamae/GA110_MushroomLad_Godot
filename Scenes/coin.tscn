@@ -23,3 +23,5 @@ mesh = SubResource("CylinderMesh_2qo34")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1270235919]
 shape = SubResource("SphereShape3D_jgi06")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
