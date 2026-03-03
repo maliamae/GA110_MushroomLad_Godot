@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://7lec1vi3lrnc"]
+
+[ext_resource type="PackedScene" uid="uid://biirjjrceqwkd" path="res://Scenes/block.tscn" id="1_f6slu"]
+[ext_resource type="BoxMesh" uid="uid://dof002ax80dyu" path="res://Resources/pinkBox.tres" id="2_fr3la"]
+[ext_resource type="Material" uid="uid://bam4ku6850dw5" path="res://Resources/MAT_pink.tres" id="3_pkws4"]
+[ext_resource type="PackedScene" uid="uid://cwkpaovf5gwpm" path="res://Scenes/coin.tscn" id="4_s7ctl"]
+[ext_resource type="PackedScene" uid="uid://bdnto3g31nnyr" path="res://Scenes/player.tscn" id="5_g0uxb"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pkws4"]
+sky_top_color = Color(0.6300469, 0.23972073, 0.7491513, 1)
+sky_horizon_color = Color(0.87078714, 0.58467865, 0.24721107, 1)
+ground_bottom_color = Color(0.079303466, 1.92523e-07, 0.5435898, 1)
+ground_horizon_color = Color(0.33938786, 0.6959588, 0.9049806, 1)
+
+[sub_resource type="Sky" id="Sky_f6slu"]
+sky_material = SubResource("ProceduralSkyMaterial_pkws4")
+
+[sub_resource type="Environment" id="Environment_fr3la"]
+background_mode = 2
+background_color = Color(0.2936173, 0.2655311, 0.27514052, 1)
+sky = SubResource("Sky_f6slu")
+ambient_light_color = Color(0.9165067, 0.40253493, 0.22563845, 1)
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_fr3la"]
+material = ExtResource("3_pkws4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pkws4"]
+albedo_color = Color(0.19011816, 0.31117234, 0.62821484, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f6slu"]
+material = SubResource("StandardMaterial3D_pkws4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0uxb"]
+albedo_color = Color(0.2572755, 0.6281677, 0.24296382, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_avkje"]
+material = SubResource("StandardMaterial3D_g0uxb")
+size = Vector2(50, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gr51b"]
+size = Vector3(50, 1, 50)
+
+[node name="Level01" type="Node3D" unique_id=2063162449]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1255697842]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1683462093]
+environment = SubResource("Environment_fr3la")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1511176664]
+transform = Transform3D(0.7071068, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071068, 6.8, 1.2849033, 6.1402025)
+
+[node name="Block" parent="." unique_id=267980493 instance=ExtResource("1_f6slu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.397962, 0.49859977, -3.9000006)
+
+[node name="Cube" type="MeshInstance3D" parent="." unique_id=1037569203]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8451896, 0.4927431, -3.6000001)
+mesh = ExtResource("2_fr3la")
+
+[node name="Cube3" type="MeshInstance3D" parent="." unique_id=1071823716]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 1.0451895, 1.092743, -3.6000001)
+mesh = SubResource("BoxMesh_fr3la")
+surface_material_override/0 = ExtResource("3_pkws4")
+
+[node name="Cube2" type="MeshInstance3D" parent="." unique_id=1734554414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0951896, 0.4927431, -3.6000001)
+mesh = SubResource("BoxMesh_f6slu")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=999468880]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.75, 0, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1359966423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5026851, 3.5392406, -0.0035784245)
+use_collision = true
+size = Vector3(0.83654785, 7.05, 15.3)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D" unique_id=1866567521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14731503, 0.21075964, 0.60357845)
+operation = 2
+size = Vector3(2.5500002, 2.25, 2.1000001)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=493723403]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1500001, 0, 0)
+size = Vector3(2.4, 1, 3.9)
+
+[node name="PinkBox" type="MeshInstance3D" parent="." unique_id=1980445328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35, 0.45000002, 1.5)
+mesh = ExtResource("2_fr3la")
+
+[node name="Coin" parent="." unique_id=69247005 instance=ExtResource("4_s7ctl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2000003, 0.75, 2.8500001)
+
+[node name="Player" parent="." unique_id=546651733 instance=ExtResource("5_g0uxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.700001, 0.90000004, 0)
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=972951546]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1695561558]
+mesh = SubResource("PlaneMesh_avkje")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=357846729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_gr51b")

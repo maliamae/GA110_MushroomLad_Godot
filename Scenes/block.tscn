@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://biirjjrceqwkd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fsd7l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fsd7l"]
+albedo_color = Color(0.41589677, 0.22192919, 0.073167466, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_fsd7l"]
+material = SubResource("StandardMaterial3D_fsd7l")
+
+[node name="Block" type="MeshInstance3D" unique_id=267980493]
+mesh = SubResource("BoxMesh_fsd7l")
+metadata/_edit_group_ = true
+
+[node name="Roof" type="MeshInstance3D" parent="." unique_id=334298248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9937391, 0)
+mesh = SubResource("PrismMesh_fsd7l")
