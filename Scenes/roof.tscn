@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://oxtllupxk4bo"]
+
+[node name="roof" type="Node3D" unique_id=2097236321]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=993363035]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=357316535]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, 0, 0)
+radius = 5.0
+height = 9.0
+sides = 24
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=2113078888]
+operation = 2
+radius = 4.5
+height = 9.0
+sides = 24
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=1509309205]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4901161e-08, 3.0625)
+operation = 2
+size = Vector3(15, 9, 6.125)
