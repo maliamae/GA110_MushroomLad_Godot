@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlpiduo5klp6o"]
 
-[ext_resource type="PackedScene" uid="uid://bdnto3g31nnyr" path="res://Scenes/player.tscn" id="1_e4kat"]
+[ext_resource type="PackedScene" uid="uid://bdnto3g31nnyr" path="res://Scenes/test_player.tscn" id="1_e4kat"]
 [ext_resource type="PackedScene" uid="uid://nf2e13spbwas" path="res://Scenes/oubliette.tscn" id="2_ha38h"]
 [ext_resource type="PackedScene" uid="uid://7h837y2b1pw0" path="res://Scenes/water_plane.tscn" id="3_3cvh8"]
 [ext_resource type="PackedScene" uid="uid://1s7wuolsl15i" path="res://Scenes/side_wall.tscn" id="4_n8u0m"]
@@ -213,3 +213,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -4.75)
 
 [node name="floating_platform" parent="." unique_id=1464046690 instance=ExtResource("8_khf8t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.375, 3, -3.625)
+
+[node name="Lights" type="Node3D" parent="." unique_id=1351319199]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1677960421]
+transform = Transform3D(0.88161665, 2.0630296e-08, -0.47196615, 0.47196615, -3.8536687e-08, 0.88161665, 0, -1, -4.371139e-08, -2.639995, 8.667938, -1.473903)
+light_color = Color(0.8908797, 0.79682595, 0.2384032, 1)
+light_energy = 8.73
+spot_range = 10.0
+spot_angle = 34.45365
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=825386944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.760462, -6.266187)
+light_color = Color(0.26319999, 0.79336, 0.94, 1)
+light_energy = 1.382
+omni_range = 5.7719865

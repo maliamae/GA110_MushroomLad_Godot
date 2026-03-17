@@ -4,7 +4,8 @@
 [ext_resource type="BoxMesh" uid="uid://dof002ax80dyu" path="res://Resources/pinkBox.tres" id="2_fr3la"]
 [ext_resource type="Material" uid="uid://bam4ku6850dw5" path="res://Resources/MAT_pink.tres" id="3_pkws4"]
 [ext_resource type="PackedScene" uid="uid://cwkpaovf5gwpm" path="res://Scenes/coin.tscn" id="4_s7ctl"]
-[ext_resource type="PackedScene" uid="uid://bdnto3g31nnyr" path="res://Scenes/player.tscn" id="5_g0uxb"]
+[ext_resource type="PackedScene" uid="uid://dp8l64keoupar" path="res://Scenes/player.tscn" id="5_g0uxb"]
+[ext_resource type="Script" uid="uid://ysgq2q2e3o0v" path="res://Scripts/fall_zone.gd" id="6_avkje"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pkws4"]
 sky_top_color = Color(0.6300469, 0.23972073, 0.7491513, 1)
@@ -54,6 +55,9 @@ size = Vector2(50, 50)
 [sub_resource type="BoxShape3D" id="BoxShape3D_gr51b"]
 size = Vector3(50, 1, 50)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_avkje"]
+size = Vector3(15, 4, 1)
+
 [node name="Level01" type="Node3D" unique_id=2063162449]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1255697842]
@@ -62,9 +66,6 @@ shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1683462093]
 environment = SubResource("Environment_fr3la")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1511176664]
-transform = Transform3D(0.7071068, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071068, 6.8, 1.2849033, 6.1402025)
 
 [node name="Block" parent="." unique_id=267980493 instance=ExtResource("1_f6slu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.397962, 0.49859977, -3.9000006)
@@ -106,9 +107,6 @@ mesh = ExtResource("2_fr3la")
 [node name="Coin" parent="." unique_id=69247005 instance=ExtResource("4_s7ctl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2000003, 0.75, 2.8500001)
 
-[node name="Player" parent="." unique_id=546651733 instance=ExtResource("5_g0uxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.700001, 0.90000004, 0)
-
 [node name="Floor" type="StaticBody3D" parent="." unique_id=972951546]
 metadata/_edit_group_ = true
 
@@ -119,9 +117,16 @@ mesh = SubResource("PlaneMesh_avkje")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("BoxShape3D_gr51b")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1672833541]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0)
-light_color = Color(0.19383883, 0.512639, 1, 1)
-light_energy = 35.295
-light_indirect_energy = 2.389
-light_volumetric_fog_energy = 16.0
+[node name="FallZone" type="Area3D" parent="." unique_id=2118487314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+collision_layer = 4
+script = ExtResource("6_avkje")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone" unique_id=2015048784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.5, 0)
+shape = SubResource("BoxShape3D_avkje")
+
+[node name="Player" parent="." unique_id=1588105895 instance=ExtResource("5_g0uxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5)
+
+[connection signal="body_entered" from="FallZone" to="FallZone" method="_on_body_entered"]
