@@ -18,13 +18,14 @@ radius = 0.29052734
 height = 1.0159302
 
 [node name="Player" type="CharacterBody3D" unique_id=546651733]
+collision_mask = 7
 script = ExtResource("1_v0iea")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1943194289]
 mesh = SubResource("CapsuleMesh_0bb2n")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1922423816]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.307546, 0.20707986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.307546, -0.16792014)
 mesh = SubResource("BoxMesh_jcea2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1964925836]

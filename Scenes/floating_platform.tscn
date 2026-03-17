@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dixws230pxqm6"]
+
+[ext_resource type="Script" uid="uid://c6jrq83t7iltx" path="res://Scripts/floating_platform_staticBody.gd" id="1_4lfrg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4lfrg"]
+top_radius = 0.35
+bottom_radius = 0.35
+height = 0.65
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ytl5q"]
+height = 0.65
+radius = 0.35
+
+[node name="floating_platform" type="StaticBody3D" unique_id=1464046690]
+collision_layer = 2
+script = ExtResource("1_4lfrg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=284386594]
+mesh = SubResource("CylinderMesh_4lfrg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=410602326]
+shape = SubResource("CylinderShape3D_ytl5q")

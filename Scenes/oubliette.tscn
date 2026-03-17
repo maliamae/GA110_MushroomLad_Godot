@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://nf2e13spbwas"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hcann"]
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1772476226]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1994483520]
+shape = SubResource("BoxShape3D_hcann")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=702772155]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=293849960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
+size = Vector3(3, 3.25, 3)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D" unique_id=2134807368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0625, 0)
+operation = 2
+size = Vector3(2.75, 2.85, 2.75)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D" unique_id=1797729025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.375, 0)
+operation = 2
