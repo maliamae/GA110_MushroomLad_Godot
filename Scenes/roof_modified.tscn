@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dfpkmu8qdbu4l"]
+
+[ext_resource type="PackedScene" uid="uid://oxtllupxk4bo" path="res://Scenes/roof.tscn" id="1_kupby"]
+
+[node name="roof_modified" type="Node3D" unique_id=1520669535]
+
+[node name="roof" parent="." unique_id=2097236321 instance=ExtResource("1_kupby")]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="roof/CSGCombiner3D/CSGCylinder3D" parent_id_path=PackedInt32Array(2097236321, 357316535) index="2" unique_id=950641805]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 0, 0, 0)
+operation = 2
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="roof/CSGCombiner3D/CSGCylinder3D/CSGCombiner3D" unique_id=651592733]
+transform = Transform3D(-2.9802322e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -2.9802322e-08, -8.881784e-16, 0, 0, 0)
+radius = 4.0
+height = 10.0
+sides = 24
+
+[node name="CSGBox3D" type="CSGBox3D" parent="roof/CSGCombiner3D/CSGCylinder3D/CSGCombiner3D/CSGCylinder3D2" unique_id=860332071]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, 2.646978e-23, 1, 0, -1.4901161e-08, 3.125)
+operation = 2
+size = Vector3(15, 10, 6)
+
+[node name="perpendicular_roof" type="CSGCombiner3D" parent="roof/CSGCombiner3D" parent_id_path=PackedInt32Array(2097236321, 993363035) index="1" unique_id=1105038649]
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="roof/CSGCombiner3D/perpendicular_roof" unique_id=673143492]
+transform = Transform3D(-2.9802322e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -2.9802322e-08, -8.881784e-16, 0, 0, 0)
+radius = 4.0
+height = 12.0
+sides = 24
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2" unique_id=1142401761]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, 2.646978e-23, 1, 0, 0, 0)
+operation = 2
+radius = 3.5
+height = 12.0
+sides = 24
+
+[node name="CSGBox3D" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2" unique_id=1925787257]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, 2.646978e-23, 1, 0, -1.4901161e-08, 3.0625)
+operation = 2
+size = Vector3(10, 12, 6.125)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2" unique_id=1899903065]
+transform = Transform3D(-2.9802322e-08, 1, 2.9802322e-08, -1, -2.9802322e-08, -2.9802322e-08, -2.9802322e-08, -2.9802322e-08, 1, 0, 0, 0)
+operation = 2
+radius = 4.5
+height = 9.0
+sides = 24
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2/CSGCylinder3D2" unique_id=1753844765]
+visible = false
+operation = 2
+radius = 4.5
+height = 9.0
+sides = 24
+
+[node name="CSGBox3D" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2/CSGCylinder3D2" unique_id=507629106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4901161e-08, 3.1875)
+operation = 2
+size = Vector3(15, 9, 5.875)
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2/CSGCylinder3D2" unique_id=2119311797]
+transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, 1, 0, -1, 2.9802322e-08, 0, 0, 0)
+visible = false
+operation = 2
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2/CSGCylinder3D2/CSGCombiner3D" unique_id=1973024820]
+transform = Transform3D(-2.9802322e-08, -1, -2.9802322e-08, 0, 2.9802322e-08, -1, 1, -2.9802322e-08, -8.881784e-16, 0, 0, 0)
+radius = 4.0
+height = 10.0
+sides = 24
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2/CSGCylinder3D2/CSGCombiner3D/CSGCylinder3D2" unique_id=555527454]
+visible = false
+operation = 2
+radius = 3.5
+height = 10.0
+sides = 24
+
+[node name="CSGBox3D" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGCylinder3D2/CSGCylinder3D2/CSGCombiner3D/CSGCylinder3D2" unique_id=2077706204]
+transform = Transform3D(1, 0, 0, 0, 1, 2.646978e-23, 0, 2.646978e-23, 1, 0, -1.4901161e-08, 3.125)
+operation = 2
+size = Vector3(15, 10, 6)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="roof/CSGCombiner3D/perpendicular_roof" unique_id=1229256089]
+transform = Transform3D(0.63, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+radius = 4.0
+radial_segments = 8
+rings = 8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGSphere3D" unique_id=1668220638]
+operation = 2
+radius = 3.5
+radial_segments = 8
+rings = 8
+
+[node name="CSGBox3D" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGSphere3D" unique_id=2132313534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+operation = 2
+size = Vector3(8, 4, 8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGSphere3D" unique_id=675440135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.875, 0)
+operation = 2
+size = Vector3(4, 5, 9)
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="roof/CSGCombiner3D/perpendicular_roof" unique_id=807501951]
+transform = Transform3D(-0.6, 0, -9.685754e-08, 0, 1, 0, 5.811453e-08, 0, -0.99999994, 6, 0, 0)
+radius = 4.0
+radial_segments = 8
+rings = 8
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGSphere3D2" unique_id=421715994]
+operation = 2
+radius = 3.5
+radial_segments = 8
+rings = 8
+
+[node name="CSGBox3D" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGSphere3D2" unique_id=404124457]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+operation = 2
+size = Vector3(8, 4, 8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="roof/CSGCombiner3D/perpendicular_roof/CSGSphere3D2" unique_id=875059643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.875, 0)
+operation = 2
+size = Vector3(4, 5, 9)
+
+[editable path="roof"]

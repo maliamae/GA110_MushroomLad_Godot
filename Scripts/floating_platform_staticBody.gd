@@ -3,10 +3,10 @@ extends StaticBody3D
 var initial_pos: Vector3 
 var max_height: float
 var min_height: float
-var move_distance = .5
+@export var move_distance = .5
 var oscilate_t = 0.0
 
-var move_speed = 25
+@export var move_speed = 25
 var is_under_player: bool = false
 var reseting: bool = false
 

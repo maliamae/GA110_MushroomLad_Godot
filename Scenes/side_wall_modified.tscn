@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c51nrwdbd8cvv"]
+
+[ext_resource type="PackedScene" uid="uid://1s7wuolsl15i" path="res://Scenes/side_wall.tscn" id="1_unj85"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_unj85"]
+size = Vector3(1.5, 0.5, 9)
+
+[node name="side_wall_modified" type="Node3D" unique_id=787280927]
+
+[node name="side_wall" parent="." unique_id=2072426151 instance=ExtResource("1_unj85")]
+
+[node name="CollisionShape3D" parent="side_wall" index="0" unique_id=1350740475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9375, 0)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="side_wall" unique_id=1097864811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6875, 0)
+shape = SubResource("BoxShape3D_unj85")
+
+[node name="CSGBox3D" parent="side_wall/CSGCombiner3D" parent_id_path=PackedInt32Array(2072426151, 2078856079) index="0" unique_id=366267910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.875, 0)
+size = Vector3(0.5, 12.75, 9)
+
+[node name="window" type="CSGPolygon3D" parent="side_wall/CSGCombiner3D/CSGBox3D" index="0" unique_id=1550601119]
+transform = Transform3D(7.4505806e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 7.4505806e-08, 1.125, 2.875, 0.25)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0, 0.75, 0.25, 1.5, 0.5, 0.75, 0.5, 0)
+depth = 2.0
+
+[node name="window2" type="CSGPolygon3D" parent="side_wall/CSGCombiner3D/CSGBox3D" index="1" unique_id=1233578837]
+transform = Transform3D(7.4505806e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 7.4505806e-08, 1.125, 2.875, 2.75)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0, 0.75, 0.25, 1.5, 0.5, 0.75, 0.5, 0)
+depth = 2.0
+
+[node name="window3" type="CSGPolygon3D" parent="side_wall/CSGCombiner3D/CSGBox3D" index="2" unique_id=1422888971]
+transform = Transform3D(7.4505806e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 7.4505806e-08, 1.125, 2.875, 1.5)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0, 0.75, 0.25, 1.5, 0.5, 0.75, 0.5, 0)
+depth = 2.0
+
+[node name="window4" type="CSGPolygon3D" parent="side_wall/CSGCombiner3D/CSGBox3D" index="3" unique_id=1932440163]
+transform = Transform3D(7.4505806e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 7.4505806e-08, 1.125, 2.875, -1)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0, 0.75, 0.25, 1.5, 0.5, 0.75, 0.5, 0)
+depth = 2.0
+
+[node name="window5" type="CSGPolygon3D" parent="side_wall/CSGCombiner3D/CSGBox3D" index="4" unique_id=1551247025]
+transform = Transform3D(7.4505806e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 7.4505806e-08, 1.125, 2.875, -2.25)
+operation = 2
+polygon = PackedVector2Array(0, 0, 0, 0.75, 0.25, 1.5, 0.5, 0.75, 0.5, 0)
+depth = 2.0
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="side_wall/CSGCombiner3D" parent_id_path=PackedInt32Array(2072426151, 2078856079) index="1" unique_id=460154960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6875, 0)
+size = Vector3(1.5, 0.5, 9)
+
+[editable path="side_wall"]

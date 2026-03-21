@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://nf2e13spbwas"]
 
+[ext_resource type="PackedScene" uid="uid://bqibnr7ssaboy" path="res://Scenes/stairs_unit.tscn" id="1_lqxt0"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_hcann"]
 size = Vector3(3, 1, 3)
 
@@ -23,3 +25,18 @@ size = Vector3(2.75, 2.85, 2.75)
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D" unique_id=1797729025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.375, 0)
 operation = 2
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=146805674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6875, -1.875)
+size = Vector3(3, 2.875, 0.75)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D2" unique_id=1926768811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.125, 1.6875, 0)
+size = Vector3(0.75, 1.125, 0.75)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGBox3D2" unique_id=1392033734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.125, 1.6875, 0)
+size = Vector3(0.75, 1.125, 0.75)
+
+[node name="stairs_unit" parent="." unique_id=784265451 instance=ExtResource("1_lqxt0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 2.125, -1.875)

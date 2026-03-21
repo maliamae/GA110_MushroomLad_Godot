@@ -1,4 +1,4 @@
-extends Area3D
+extends Area3D #doesn't provide solid collision for player to stand on
 
 var initial_pos: Vector3 
 var max_height: float

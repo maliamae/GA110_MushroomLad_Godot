@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://d1ew0qy5yf3wx"]
+
+[node name="wall_curved" type="Node3D" unique_id=1400136530]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=1778091365]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=1122304510]
+transform = Transform3D(0.63, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+radius = 4.0
+height = 9.0
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=2115387203]
+operation = 2
+radius = 3.5
+height = 9.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGCylinder3D" unique_id=1788903921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+operation = 2
+size = Vector3(4, 9, 8)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=1139813320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 3.75)
+size = Vector3(1, 9, 0.5)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D" unique_id=894271079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, -3.75)
+size = Vector3(1, 9, 0.5)

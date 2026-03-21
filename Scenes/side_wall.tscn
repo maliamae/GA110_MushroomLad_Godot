@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://1s7wuolsl15i"]
 
+[ext_resource type="PackedScene" uid="uid://cpwf84r4sblwv" path="res://Scenes/window_shape.tscn" id="1_xscl5"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_dlfuf"]
 size = Vector3(0.5, 9, 9)
 
@@ -12,3 +14,39 @@ shape = SubResource("BoxShape3D_dlfuf")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=366267910]
 size = Vector3(0.5, 9, 9)
+
+[node name="window_shape" parent="CSGCombiner3D/CSGBox3D" unique_id=2094074686 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, 0.25)
+operation = 2
+
+[node name="window_shape2" parent="CSGCombiner3D/CSGBox3D" unique_id=616558771 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, 4)
+operation = 2
+
+[node name="window_shape3" parent="CSGCombiner3D/CSGBox3D" unique_id=1734511873 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, 2.75)
+operation = 2
+
+[node name="window_shape4" parent="CSGCombiner3D/CSGBox3D" unique_id=732774276 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, 1.5)
+operation = 2
+
+[node name="window_shape5" parent="CSGCombiner3D/CSGBox3D" unique_id=1129429992 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, -1)
+operation = 2
+
+[node name="window_shape6" parent="CSGCombiner3D/CSGBox3D" unique_id=283506820 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, -2.25)
+operation = 2
+
+[node name="window_shape7" parent="CSGCombiner3D/CSGBox3D" unique_id=399614511 instance=ExtResource("1_xscl5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5, 2.75, -3.5)
+operation = 2
+
+[editable path="CSGCombiner3D/CSGBox3D/window_shape"]
+[editable path="CSGCombiner3D/CSGBox3D/window_shape2"]
+[editable path="CSGCombiner3D/CSGBox3D/window_shape3"]
+[editable path="CSGCombiner3D/CSGBox3D/window_shape4"]
+[editable path="CSGCombiner3D/CSGBox3D/window_shape5"]
+[editable path="CSGCombiner3D/CSGBox3D/window_shape6"]
+[editable path="CSGCombiner3D/CSGBox3D/window_shape7"]

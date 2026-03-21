@@ -170,7 +170,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
-height = 1.1413574
+radius = 0.25028992
+height = 0.50057983
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cvnsp"]
 
@@ -179,28 +180,28 @@ script = ExtResource("1_cvnsp")
 
 [node name="animal-caterpillar2" parent="." unique_id=842720335 instance=ExtResource("1_v0iea")]
 unique_name_in_owner = true
-transform = Transform3D(-0.5, 0, 4.371139e-08, 0, 0.5, 0, -4.371139e-08, 0, -0.5, 0, 0, 0)
+transform = Transform3D(-0.25, 0, 3.774895e-08, 0, 0.25, 0, -3.774895e-08, 0, -0.25, 0, 0, 0)
 
-[node name="leg-front-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 911248710) index="0" unique_id=1765866229]
+[node name="leg-front-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="0" unique_id=67322948]
 transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.98480767, 0, -0.98480767, 0.17364821, -0.25, 0.3, 0.25)
 
-[node name="leg-front-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 911248710) index="1" unique_id=448551679]
+[node name="leg-front-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="1" unique_id=916332053]
 transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.98480767, 0, -0.98480767, 0.17364821, 0.25, 0.3, 0.25)
 
-[node name="leg-back-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 911248710) index="2" unique_id=1283000710]
+[node name="leg-back-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="2" unique_id=771341119]
 transform = Transform3D(1, 0, 0, 0, 0.17364821, -0.98480767, 0, 0.98480767, 0.17364821, -0.25, 0.3, -0.25)
 
-[node name="leg-back-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 911248710) index="3" unique_id=1976089968]
+[node name="leg-back-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="3" unique_id=1744956006]
 transform = Transform3D(1, 0, 0, 0, 0.17364821, -0.98480767, 0, 0.98480767, 0.17364821, 0.25, 0.3, -0.25)
 
-[node name="body" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 911248710) index="4" unique_id=1582625617]
+[node name="body" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="4" unique_id=2081161047]
 transform = Transform3D(1, 0, 0, 0, 0.9945219, -0.10452846, 0, 0.10452846, 0.9945219, 1.573182e-08, 0.18124998, -3.8083503e-08)
 
-[node name="AnimationPlayer" parent="animal-caterpillar2" index="1" unique_id=672560888]
+[node name="AnimationPlayer" parent="animal-caterpillar2" index="1" unique_id=593302426]
 libraries/ = SubResource("AnimationLibrary_vgqql")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=113189383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4749756, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22468567, 0)
 shape = SubResource("CapsuleShape3D_cvnsp")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=501030436]

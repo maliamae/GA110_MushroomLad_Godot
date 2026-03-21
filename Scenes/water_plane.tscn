@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://7h837y2b1pw0"]
 
+[ext_resource type="Script" uid="uid://ysgq2q2e3o0v" path="res://Scripts/fall_zone.gd" id="1_evjf7"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_es7gv"]
 transparency = 1
 depth_draw_mode = 1
@@ -13,6 +15,7 @@ size = Vector2(3, 3)
 size = Vector3(3, 0.25, 3)
 
 [node name="water_plane" type="Area3D" unique_id=59753676]
+script = ExtResource("1_evjf7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2081701986]
 mesh = SubResource("PlaneMesh_evjf7")
@@ -20,3 +23,5 @@ mesh = SubResource("PlaneMesh_evjf7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1360026806]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
 shape = SubResource("BoxShape3D_1g4se")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

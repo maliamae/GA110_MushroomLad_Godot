@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dixws230pxqm6"]
 
 [ext_resource type="Script" uid="uid://c6jrq83t7iltx" path="res://Scripts/floating_platform_staticBody.gd" id="1_4lfrg"]
+[ext_resource type="Material" uid="uid://t4bwjlcnbqm4" path="res://Resources/MAT_barrel.tres" id="2_ytl5q"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_4lfrg"]
+material = ExtResource("2_ytl5q")
 top_radius = 0.35
 bottom_radius = 0.35
 height = 0.65
