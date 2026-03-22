@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b8vps7836um6h"]
+
+[ext_resource type="PackedScene" uid="uid://dp8l64keoupar" path="res://Scenes/player.tscn" id="1_lqutt"]
+[ext_resource type="PackedScene" uid="uid://1s7wuolsl15i" path="res://Scenes/side_wall.tscn" id="2_ym3cn"]
+[ext_resource type="PackedScene" uid="uid://8n1w1udf5a6t" path="res://Scenes/shelf_mushroom.tscn" id="3_4i73x"]
+[ext_resource type="PackedScene" uid="uid://btvurkvmy7kf6" path="res://Scenes/vine.tscn" id="4_w55uq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_in8hx"]
+sky_top_color = Color(0.08295094, 0.46121985, 0.7650066, 1)
+sky_horizon_color = Color(0.5562333, 0.7170142, 0.6012061, 1)
+ground_bottom_color = Color(0.045500003, 0.06662501, 0.13, 1)
+ground_horizon_color = Color(0.39065132, 0.29973957, 0.18751267, 1)
+
+[sub_resource type="Sky" id="Sky_ehih1"]
+sky_material = SubResource("ProceduralSkyMaterial_in8hx")
+
+[sub_resource type="Environment" id="Environment_ehemk"]
+background_mode = 2
+sky = SubResource("Sky_ehih1")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vafja"]
+albedo_color = Color(0.055123515, 0.10934631, 0.16987205, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_prqow"]
+material = SubResource("StandardMaterial3D_vafja")
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h2auu"]
+size = Vector3(20, 0.5, 20)
+
+[node name="mechanics_test_level" type="Node3D" unique_id=242415888]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=406532010]
+environment = SubResource("Environment_ehemk")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=161346677]
+transform = Transform3D(-1, -4.770465e-08, 6.008869e-08, 2.08039e-09, 0.7660444, 0.6427877, -7.669456e-08, 0.6427877, -0.7660444, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1663886829]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=2106560879]
+mesh = SubResource("PlaneMesh_prqow")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1186369353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_h2auu")
+debug_fill = false
+
+[node name="Player" parent="." unique_id=1588105895 instance=ExtResource("1_lqutt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.375)
+
+[node name="side_wall" parent="." unique_id=2072426151 instance=ExtResource("2_ym3cn")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.25, 4.5, -3.25)
+
+[node name="side_wall2" parent="." unique_id=1624944318 instance=ExtResource("2_ym3cn")]
+transform = Transform3D(-1.0000001, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, -1.0000001, 2.75, 4.5, 0)
+
+[node name="shelf_mushroom" parent="." unique_id=1413824414 instance=ExtResource("3_4i73x")]
+transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, -1.75, 2.125, -3)
+
+[node name="shelf_mushroom2" parent="." unique_id=415791709 instance=ExtResource("3_4i73x")]
+transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, -2.75, 2.625, -3)
+
+[node name="shelf_mushroom3" parent="." unique_id=171717060 instance=ExtResource("3_4i73x")]
+transform = Transform3D(6.7055225e-08, 0, -1, 0, 1, 0, 1, 0, 6.7055225e-08, 1.25, 3.5, -3)
+
+[node name="vine" parent="." unique_id=632868339 instance=ExtResource("4_w55uq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, -2.875)
+
+[node name="vine2" parent="." unique_id=272916270 instance=ExtResource("4_w55uq")]
+transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 2.375, 1.125, -0.125)

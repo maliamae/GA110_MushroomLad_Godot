@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://8n1w1udf5a6t"]
+
+[ext_resource type="Material" uid="uid://cm8300svoorh4" path="res://Resources/MAT_shelf_mushroom.tres" id="1_8xo6d"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3mxs2"]
+height = 0.31835938
+radius = 0.6621094
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j1kdm"]
+height = 0.3540039
+
+[node name="shelf_mushroom" type="Node3D" unique_id=1413824414]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=539273227]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="StaticBody3D" unique_id=2098264354]
+transform = Transform3D(0.9, 0, 0, 0, 0.6, 0, 0, 0, 1.36, 0, 0, 0)
+radius = 0.75
+material = ExtResource("1_8xo6d")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D/CSGSphere3D" unique_id=1774612174]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+operation = 2
+size = Vector3(1.5, 1, 1.5)
+material = ExtResource("1_8xo6d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=114447907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15527344, 0)
+shape = SubResource("CylinderShape3D_3mxs2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1451228247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1652832, 0.4681757)
+shape = SubResource("CylinderShape3D_j1kdm")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=82444354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1652832, -0.45866144)
+shape = SubResource("CylinderShape3D_j1kdm")

@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://c51nrwdbd8cvv" path="res://Scenes/side_wall_modified.tscn" id="5_q5ual"]
 [ext_resource type="PackedScene" uid="uid://dfpkmu8qdbu4l" path="res://Scenes/roof_modified.tscn" id="6_3vtai"]
 [ext_resource type="PackedScene" uid="uid://cmsy0ichub6c3" path="res://Scenes/arch.tscn" id="6_4p3mm"]
+[ext_resource type="PackedScene" uid="uid://btvurkvmy7kf6" path="res://Scenes/vine.tscn" id="6_f7i5e"]
 [ext_resource type="PackedScene" uid="uid://d1ew0qy5yf3wx" path="res://Scenes/wall_curved.tscn" id="6_vgdfs"]
 [ext_resource type="PackedScene" uid="uid://cbi2vijx8awjr" path="res://Scenes/lilypad.tscn" id="7_tldnm"]
 [ext_resource type="PackedScene" uid="uid://dixws230pxqm6" path="res://Scenes/floating_platform.tscn" id="8_khf8t"]
+[ext_resource type="PackedScene" uid="uid://8n1w1udf5a6t" path="res://Scenes/shelf_mushroom.tscn" id="11_1sn8i"]
 [ext_resource type="PackedScene" uid="uid://dp8l64keoupar" path="res://Scenes/player.tscn" id="11_vgdfs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p7ssk"]
@@ -27,6 +29,11 @@ size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n8u0m"]
 size = Vector3(100, 1, 100)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vgdfs"]
+size = Vector3(9, 9, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f7i5e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vgdfs"]
 size = Vector3(9, 3.25, 7.375)
@@ -180,9 +187,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, -1)
 [node name="side_wall5" parent="Walls" unique_id=1568138120 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, 8)
 
-[node name="side_wall11" parent="Walls" unique_id=1383738846 instance=ExtResource("4_n8u0m")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 4.5, 6.75)
-
 [node name="side_wall12" parent="Walls" unique_id=2085987216 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 13.5, 6.75)
 
@@ -248,6 +252,19 @@ size = Vector3(0.5, 9, 1)
 [node name="wall_pillar4" type="CSGBox3D" parent="Walls" unique_id=1219562840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -6)
 size = Vector3(0.5, 9, 1)
+
+[node name="back_wall" type="StaticBody3D" parent="Walls" unique_id=1534506390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.25)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Walls/back_wall" unique_id=685346818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.5, -0.5)
+mesh = SubResource("BoxMesh_vgdfs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/back_wall" unique_id=959934795]
+shape = SubResource("BoxShape3D_f7i5e")
+
+[node name="vine" parent="Walls" unique_id=632868339 instance=ExtResource("6_f7i5e")]
+transform = Transform3D(-0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.8660253, -6.625, 4.125, -7.125)
 
 [node name="Roofs" type="Node3D" parent="." unique_id=1455176719]
 
@@ -353,15 +370,32 @@ omni_range = 5.7719865
 [node name="Lilypads" type="Node3D" parent="." unique_id=440360043]
 
 [node name="lilypad" parent="Lilypads" unique_id=197424431 instance=ExtResource("7_tldnm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 3, -4.875)
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -0.25, 3, -4.875)
+
+[node name="lilypad3" parent="Lilypads" unique_id=2090015245 instance=ExtResource("7_tldnm")]
+transform = Transform3D(-1.3039999, 0, -0.34940583, 0, 1, 0, 0.34940583, 0, -1.3039999, -1.75, 3, -7.375)
+
+[node name="lilypad5" parent="Lilypads" unique_id=151158752 instance=ExtResource("7_tldnm")]
+transform = Transform3D(0.675, 0, 1.1691343, 0, 1, 0, -1.1691343, 0, 0.675, -3.5, 3, -13.125)
 
 [node name="lilypad2" parent="Lilypads" unique_id=347292891 instance=ExtResource("7_tldnm")]
-transform = Transform3D(0.65, 0, 0, 0, 1, 0, 0, 0, 0.65, 0.625, 3, -4.125)
+transform = Transform3D(0.1682324, 0, 0.6278518, 0, 1, 0, -0.6278518, 0, 0.1682324, 0.625, 3, -4.125)
+
+[node name="lilypad4" parent="Lilypads" unique_id=1613689141 instance=ExtResource("7_tldnm")]
+transform = Transform3D(0.325, 0, -0.5629165, 0, 1, 0, 0.5629165, 0, 0.325, -2.125, 3, -6.375)
 
 [node name="Barrels" type="Node3D" parent="." unique_id=983827985]
 
 [node name="floating_platform" parent="Barrels" unique_id=1464046690 instance=ExtResource("8_khf8t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.875, 3, -8.125)
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -4.875, 3, -8.125)
+move_distance = 0.25
+move_speed = 50
+
+[node name="shelf_mushroom" parent="Barrels" unique_id=1413824414 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -7.75, 6.125, -8.25)
+
+[node name="shelf_mushroom2" parent="Barrels" unique_id=1486407637 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 0, -7.75, 7.125, -7.25)
 
 [node name="Player" parent="." unique_id=1588105895 instance=ExtResource("11_vgdfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.375, -1.625)

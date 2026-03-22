@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://btvurkvmy7kf6"]
+
+[ext_resource type="Script" uid="uid://cpnuvml7dxryk" path="res://Scripts/vine.gd" id="1_6slj2"]
+[ext_resource type="Material" uid="uid://c4hgb5skynkip" path="res://Resources/MAT_vine.tres" id="1_hl6mt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u6xv0"]
+size = Vector3(1.5, 4, 0.375)
+
+[node name="vine" type="Node3D" unique_id=632868339]
+script = ExtResource("1_6slj2")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1200317447]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=79552819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8125, 0.0625)
+shape = SubResource("BoxShape3D_u6xv0")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Area3D" unique_id=1989857257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8125, -0.0625)
+size = Vector3(1.5, 4, 0.125)
+material = ExtResource("1_hl6mt")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

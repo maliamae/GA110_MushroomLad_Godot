@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dp8l64keoupar"]
 
-[ext_resource type="Script" uid="uid://bmwjmjmmort8o" path="res://Scripts/player_in_class.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://dpdcgmwpuab0t" path="res://Scripts/player_movement.gd" id="1_cvnsp"]
 [ext_resource type="PackedScene" uid="uid://d2uovq0jvwhy" path="res://Assets/Character_Model/animal-caterpillar.glb" id="1_v0iea"]
 
 [sub_resource type="Animation" id="Animation_v0iea"]
@@ -183,22 +183,31 @@ unique_name_in_owner = true
 transform = Transform3D(-0.25, 0, 3.774895e-08, 0, 0.25, 0, -3.774895e-08, 0, -0.25, 0, 0, 0)
 
 [node name="leg-front-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="0" unique_id=67322948]
-transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.98480767, 0, -0.98480767, 0.17364821, -0.25, 0.3, 0.25)
+transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.9848076, 0, -0.9848076, 0.17364821, -0.25, 0.3, 0.25)
 
 [node name="leg-front-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="1" unique_id=916332053]
-transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.98480767, 0, -0.98480767, 0.17364821, 0.25, 0.3, 0.25)
+transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.9848076, 0, -0.9848076, 0.17364821, 0.25, 0.3, 0.25)
 
 [node name="leg-back-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="2" unique_id=771341119]
-transform = Transform3D(1, 0, 0, 0, 0.17364821, -0.98480767, 0, 0.98480767, 0.17364821, -0.25, 0.3, -0.25)
+transform = Transform3D(1, 0, 0, 0, 0.17364821, -0.9848076, 0, 0.9848076, 0.17364821, -0.25, 0.3, -0.25)
 
 [node name="leg-back-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="3" unique_id=1744956006]
-transform = Transform3D(1, 0, 0, 0, 0.17364821, -0.98480767, 0, 0.98480767, 0.17364821, 0.25, 0.3, -0.25)
+transform = Transform3D(1, 0, 0, 0, 0.17364821, -0.9848076, 0, 0.9848076, 0.17364821, 0.25, 0.3, -0.25)
 
 [node name="body" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="4" unique_id=2081161047]
 transform = Transform3D(1, 0, 0, 0, 0.9945219, -0.10452846, 0, 0.10452846, 0.9945219, 1.573182e-08, 0.18124998, -3.8083503e-08)
 
 [node name="AnimationPlayer" parent="animal-caterpillar2" index="1" unique_id=593302426]
 libraries/ = SubResource("AnimationLibrary_vgqql")
+
+[node name="Debug X-axis" type="CSGBox3D" parent="animal-caterpillar2" unique_id=897389355]
+transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 5.6181054e-08, 1.9470215, 0.3720703)
+visible = false
+size = Vector3(1, 0.026489258, 0.068847656)
+
+[node name="RayCast3D" type="RayCast3D" parent="animal-caterpillar2" unique_id=869731500]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.1060867e-07, 0.79475224, 0.7325281)
+target_position = Vector3(0, -2, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=113189383]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22468567, 0)
