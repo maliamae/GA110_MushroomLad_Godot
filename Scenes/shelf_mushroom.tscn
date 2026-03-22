@@ -7,11 +7,13 @@ height = 0.31835938
 radius = 0.6621094
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_j1kdm"]
-height = 0.3540039
+height = 0.38150024
+radius = 0.625
 
 [node name="shelf_mushroom" type="Node3D" unique_id=1413824414]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=539273227]
+collision_layer = 16
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="StaticBody3D" unique_id=2098264354]
 transform = Transform3D(0.9, 0, 0, 0, 0.6, 0, 0, 0, 1.36, 0, 0, 0)
@@ -29,9 +31,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15527344, 0)
 shape = SubResource("CylinderShape3D_3mxs2")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1451228247]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1652832, 0.4681757)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1652832, 0.35633236)
 shape = SubResource("CylinderShape3D_j1kdm")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=82444354]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1652832, -0.45866144)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1652832, -0.37505683)
 shape = SubResource("CylinderShape3D_j1kdm")

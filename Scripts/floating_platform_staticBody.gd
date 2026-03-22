@@ -13,7 +13,6 @@ var reseting: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	initial_pos = global_position
-	print(initial_pos)
 	max_height = initial_pos.y
 	min_height = max_height - move_distance
 	oscilate_t = randf_range(0.0, 1.0)

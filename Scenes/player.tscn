@@ -170,17 +170,19 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
-radius = 0.25028992
-height = 0.50057983
+radius = 0.24511719
+height = 0.49023438
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_cvnsp"]
+radius = 0.15
 
 [node name="Player" type="CharacterBody3D" unique_id=1588105895]
+collision_mask = 27
 script = ExtResource("1_cvnsp")
 
 [node name="animal-caterpillar2" parent="." unique_id=842720335 instance=ExtResource("1_v0iea")]
 unique_name_in_owner = true
-transform = Transform3D(-0.25, 0, 3.774895e-08, 0, 0.25, 0, -3.774895e-08, 0, -0.25, 0, 0, 0)
+transform = Transform3D(-0.2, 0, 3.019916e-08, 0, 0.2, 0, -3.019916e-08, 0, -0.2, 0, 0, 0)
 
 [node name="leg-front-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="0" unique_id=67322948]
 transform = Transform3D(1, 0, 0, 0, 0.17364821, 0.9848076, 0, -0.9848076, 0.17364821, -0.25, 0.3, 0.25)
@@ -200,17 +202,12 @@ transform = Transform3D(1, 0, 0, 0, 0.9945219, -0.10452846, 0, 0.10452846, 0.994
 [node name="AnimationPlayer" parent="animal-caterpillar2" index="1" unique_id=593302426]
 libraries/ = SubResource("AnimationLibrary_vgqql")
 
-[node name="Debug X-axis" type="CSGBox3D" parent="animal-caterpillar2" unique_id=897389355]
-transform = Transform3D(-4, 0, -6.039832e-07, 0, 4, 0, 6.039832e-07, 0, -4, 5.6181054e-08, 1.9470215, 0.3720703)
-visible = false
-size = Vector3(1, 0.026489258, 0.068847656)
-
 [node name="RayCast3D" type="RayCast3D" parent="animal-caterpillar2" unique_id=869731500]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.1060867e-07, 0.79475224, 0.7325281)
 target_position = Vector3(0, -2, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=113189383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22468567, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20715904, 0)
 shape = SubResource("CapsuleShape3D_cvnsp")
 
 [node name="CameraPivot" type="Node3D" parent="." unique_id=501030436]
@@ -221,7 +218,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.72750974, 0)
 transform = Transform3D(1, 0, 0, 0, 0.9562436, 0.29257196, 0, -0.29257196, 0.9562436, 0, 0, 0)
 collision_mask = 7
 shape = SubResource("SphereShape3D_cvnsp")
-spring_length = 5.0
+spring_length = 3.0
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=408613062]
 unique_name_in_owner = true

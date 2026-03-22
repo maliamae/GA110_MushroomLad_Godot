@@ -2,30 +2,6 @@
 
 [node name="stairs_unit" type="StaticBody3D" unique_id=784265451]
 
-[node name="stairs01" type="CSGCombiner3D" parent="." unique_id=939960153]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.075, 0)
-visible = false
-
-[node name="CSGBox3D" type="CSGBox3D" parent="stairs01" unique_id=1191649478]
-size = Vector3(1, 0.15, 1.5)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="stairs01" unique_id=1865472485]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0.15, 0)
-size = Vector3(0.75, 0.15, 1.5)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="stairs01" unique_id=2071254281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23749998, 0.3, 0)
-size = Vector3(0.52500004, 0.15, 1.5)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="stairs01" unique_id=1233744965]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.45000002, 0)
-size = Vector3(0.3, 0.15, 1.5)
-
-[node name="stairs01_collider" type="CollisionPolygon3D" parent="." unique_id=1639865700]
-visible = false
-depth = 1.5
-polygon = PackedVector2Array(-0.5, 0, 0.5, 0, 0.5, 0.15, 0.25, 0.15, 0.25, 0.3, 0.025, 0.3, 0.025, 0.45, -0.2, 0.45, -0.2, 0.6, -0.5, 0.6)
-
 [node name="stairs02" type="CSGCombiner3D" parent="." unique_id=36988722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 0)
 

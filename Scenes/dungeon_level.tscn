@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://7h837y2b1pw0" path="res://Scenes/water_plane.tscn" id="3_3cvh8"]
 [ext_resource type="PackedScene" uid="uid://1s7wuolsl15i" path="res://Scenes/side_wall.tscn" id="4_n8u0m"]
 [ext_resource type="PackedScene" uid="uid://oxtllupxk4bo" path="res://Scenes/roof.tscn" id="5_66i6n"]
-[ext_resource type="PackedScene" uid="uid://c51nrwdbd8cvv" path="res://Scenes/side_wall_modified.tscn" id="5_q5ual"]
+[ext_resource type="PackedScene" uid="uid://cqm1f7q41ubug" path="res://Scenes/wall_pillar.tscn" id="5_f7i5e"]
 [ext_resource type="PackedScene" uid="uid://dfpkmu8qdbu4l" path="res://Scenes/roof_modified.tscn" id="6_3vtai"]
 [ext_resource type="PackedScene" uid="uid://cmsy0ichub6c3" path="res://Scenes/arch.tscn" id="6_4p3mm"]
 [ext_resource type="PackedScene" uid="uid://btvurkvmy7kf6" path="res://Scenes/vine.tscn" id="6_f7i5e"]
@@ -64,9 +64,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, -0.75)
 
 [node name="WaterPlanes" type="Node3D" parent="." unique_id=1759430759]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.75)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="water_plane" parent="WaterPlanes" unique_id=59753676 instance=ExtResource("3_3cvh8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 2.75)
 
 [node name="water_plane2" parent="WaterPlanes" unique_id=1195022719 instance=ExtResource("3_3cvh8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -1.5)
@@ -164,6 +166,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -19.5)
 [node name="water_plane23" parent="WaterPlanes" unique_id=199403243 instance=ExtResource("3_3cvh8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -19.5)
 
+[node name="water_plane39" parent="WaterPlanes" unique_id=2035575837 instance=ExtResource("3_3cvh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -22.5)
+
+[node name="water_plane40" parent="WaterPlanes" unique_id=1323758480 instance=ExtResource("3_3cvh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -22.5)
+
+[node name="water_plane41" parent="WaterPlanes" unique_id=1356522585 instance=ExtResource("3_3cvh8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -22.5)
+
 [node name="water_plane7" parent="WaterPlanes" unique_id=791554815 instance=ExtResource("3_3cvh8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -1.5)
 
@@ -171,7 +182,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, -1.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 1.5)
 
 [node name="water_plane24" parent="WaterPlanes" unique_id=485941642 instance=ExtResource("3_3cvh8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 4.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 5.75)
 
 [node name="water_plane25" parent="WaterPlanes" unique_id=1998274311 instance=ExtResource("3_3cvh8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 4.5)
@@ -180,6 +191,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, 4.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3, 4.5)
 
 [node name="Walls" type="Node3D" parent="." unique_id=556324659]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="side_wall" parent="Walls" unique_id=2072426151 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, -1)
@@ -190,30 +203,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, 8)
 [node name="side_wall12" parent="Walls" unique_id=2085987216 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 13.5, 6.75)
 
-[node name="side_wall2" parent="Walls" unique_id=1885259385 instance=ExtResource("4_n8u0m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 4.5, -10)
-visible = false
-
-[node name="CollisionShape3D" parent="Walls/side_wall2" index="0" unique_id=1350740475]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9375, 0)
-
-[node name="CSGBox3D" parent="Walls/side_wall2/CSGCombiner3D" parent_id_path=PackedInt32Array(1885259385, 2078856079) index="0" unique_id=366267910]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9375, 0)
-size = Vector3(0.5, 12.875, 9)
-
-[node name="side_wall_modified" parent="Walls" unique_id=787280927 instance=ExtResource("5_q5ual")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.25, 4.5, -10)
-visible = false
-
 [node name="wall_curved" parent="Walls" unique_id=1400136530 instance=ExtResource("6_vgdfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 4.5, -10)
 
 [node name="wall_curved2" parent="Walls" unique_id=1478764954 instance=ExtResource("6_vgdfs")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6, 4.5, -10)
-
-[node name="side_wall_modified2" parent="Walls" unique_id=1139851081 instance=ExtResource("5_q5ual")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.25, 4.5, -10)
-visible = false
 
 [node name="side_wall3" parent="Walls" unique_id=969113557 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, -19)
@@ -227,31 +221,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -1)
 [node name="side_wall7" parent="Walls" unique_id=628109449 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, 8)
 
-[node name="side_wall8" parent="Walls" unique_id=1603991097 instance=ExtResource("4_n8u0m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -10)
-visible = false
-
 [node name="side_wall9" parent="Walls" unique_id=1230014642 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -19)
 
 [node name="side_wall10" parent="Walls" unique_id=896990151 instance=ExtResource("4_n8u0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -28)
-
-[node name="wall_pillar" type="CSGBox3D" parent="Walls" unique_id=1036161443]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, -6)
-size = Vector3(0.5, 9, 1)
-
-[node name="wall_pillar2" type="CSGBox3D" parent="Walls" unique_id=1491238306]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.75, 4.5, -14)
-size = Vector3(0.5, 9, 1)
-
-[node name="wall_pillar3" type="CSGBox3D" parent="Walls" unique_id=962095350]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -14)
-size = Vector3(0.5, 9, 1)
-
-[node name="wall_pillar4" type="CSGBox3D" parent="Walls" unique_id=1219562840]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 4.5, -6)
-size = Vector3(0.5, 9, 1)
 
 [node name="back_wall" type="StaticBody3D" parent="Walls" unique_id=1534506390]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.25)
@@ -263,10 +237,21 @@ mesh = SubResource("BoxMesh_vgdfs")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/back_wall" unique_id=959934795]
 shape = SubResource("BoxShape3D_f7i5e")
 
-[node name="vine" parent="Walls" unique_id=632868339 instance=ExtResource("6_f7i5e")]
-transform = Transform3D(-0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.8660253, -6.625, 4.125, -7.125)
+[node name="wall_pillar" parent="Walls" unique_id=1635381137 instance=ExtResource("5_f7i5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9427385, 0.5, -6.0071917)
+
+[node name="wall_pillar2" parent="Walls" unique_id=535488002 instance=ExtResource("5_f7i5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9427385, 0.5, -14.007192)
+
+[node name="wall_pillar3" parent="Walls" unique_id=2056685628 instance=ExtResource("5_f7i5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9322615, 0.5, -14.007192)
+
+[node name="wall_pillar4" parent="Walls" unique_id=48228794 instance=ExtResource("5_f7i5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9322615, 0.5, -6.0071917)
 
 [node name="Roofs" type="Node3D" parent="." unique_id=1455176719]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="roof" parent="Roofs" unique_id=2097236321 instance=ExtResource("5_66i6n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -1)
@@ -288,6 +273,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -19)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -28)
 
 [node name="Arches" type="Node3D" parent="." unique_id=1924441341]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="arch" parent="Arches" unique_id=1328309220 instance=ExtResource("6_4p3mm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -5)
@@ -299,7 +286,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 5.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -15.5)
 
 [node name="EndPlatform" type="Node3D" parent="." unique_id=2126368457]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -21)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -25.20263)
 
 [node name="EndPlatform" type="StaticBody3D" parent="EndPlatform" unique_id=745904705]
 
@@ -310,8 +297,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.375, -1.6875)
 size = Vector3(9, 3.25, 7.375)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="EndPlatform/EndPlatform/CSGCombiner3D" unique_id=625859475]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.125, 0.0625, 3)
-size = Vector3(1.25, 0.375, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3125, 0.0625, 3)
+size = Vector3(1.625, 0.375, 2)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="EndPlatform/EndPlatform/CSGCombiner3D" unique_id=181856698]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8125, -5.875)
@@ -370,43 +357,145 @@ omni_range = 5.7719865
 [node name="Lilypads" type="Node3D" parent="." unique_id=440360043]
 
 [node name="lilypad" parent="Lilypads" unique_id=197424431 instance=ExtResource("7_tldnm")]
-transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -0.25, 3, -4.875)
-
-[node name="lilypad3" parent="Lilypads" unique_id=2090015245 instance=ExtResource("7_tldnm")]
-transform = Transform3D(-1.3039999, 0, -0.34940583, 0, 1, 0, 0.34940583, 0, -1.3039999, -1.75, 3, -7.375)
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -0.367864, 3, -4.980961)
 
 [node name="lilypad5" parent="Lilypads" unique_id=151158752 instance=ExtResource("7_tldnm")]
-transform = Transform3D(0.675, 0, 1.1691343, 0, 1, 0, -1.1691343, 0, 0.675, -3.5, 3, -13.125)
+transform = Transform3D(-0.675, 0, 1.1691343, 0, 1, 0, -1.1691343, 0, -0.675, -3.125, 3, -13.375)
+
+[node name="lilypad10" parent="Lilypads" unique_id=1046305955 instance=ExtResource("7_tldnm")]
+transform = Transform3D(1.1691343, 0, 0.67499983, 0, 1, 0, -0.67499983, 0, 1.1691343, 4, 3, -12.5)
 
 [node name="lilypad2" parent="Lilypads" unique_id=347292891 instance=ExtResource("7_tldnm")]
-transform = Transform3D(0.1682324, 0, 0.6278518, 0, 1, 0, -0.6278518, 0, 0.1682324, 0.625, 3, -4.125)
+transform = Transform3D(0.1682324, 0, 0.6278518, 0, 1, 0, -0.6278518, 0, 0.1682324, 0.42722857, 3, -4.4589915)
+
+[node name="lilypad6" parent="Lilypads" unique_id=1614400329 instance=ExtResource("7_tldnm")]
+transform = Transform3D(0.65, 0, 1.4901161e-08, 0, 1, 0, -1.4901161e-08, 0, 0.65, -2.5727715, 3, -12.458992)
+
+[node name="lilypad8" parent="Lilypads" unique_id=1157601883 instance=ExtResource("7_tldnm")]
+transform = Transform3D(-0.6278518, 0, 0.16823241, 0, 1, 0, -0.16823241, 0, -0.6278518, 3.0522285, 3, -13.958992)
+
+[node name="lilypad11" parent="Lilypads" unique_id=1957221079 instance=ExtResource("7_tldnm")]
+transform = Transform3D(0.56291646, 0, -0.32500008, 0, 1, 0, 0.32500008, 0, 0.56291646, 5.6772285, 3, -10.333992)
+
+[node name="lilypad9" parent="Lilypads" unique_id=1291073355 instance=ExtResource("7_tldnm")]
+transform = Transform3D(0.325, 0, -0.5629165, 0, 1, 0, 0.5629165, 0, 0.325, 2.5522285, 3, -19.833992)
 
 [node name="lilypad4" parent="Lilypads" unique_id=1613689141 instance=ExtResource("7_tldnm")]
-transform = Transform3D(0.325, 0, -0.5629165, 0, 1, 0, 0.5629165, 0, 0.325, -2.125, 3, -6.375)
+transform = Transform3D(0.325, 0, -0.5629165, 0, 1, 0, 0.5629165, 0, 0.325, -2, 3, -6.125)
+
+[node name="lilypad7" parent="Lilypads" unique_id=617888351 instance=ExtResource("7_tldnm")]
+transform = Transform3D(-0.62785167, 0, -0.16823235, 0, 0.99999994, 0, 0.16823235, 0, -0.62785167, -2.75, 3, -7.875)
+
+[node name="ShelfShrooms" type="Node3D" parent="." unique_id=130701688]
+
+[node name="shelf_mushroom" parent="ShelfShrooms" unique_id=1413824414 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.92777115, 0, 0.37314972, 0, 1, 0, -0.37314972, 0, 0.92777115, -7.625, 5.625, -8.25)
+
+[node name="shelf_mushroom2" parent="ShelfShrooms" unique_id=1955516972 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.99273634, 0, 0.12031011, 0, 1, 0, -0.12031011, 0, 0.99273634, -7.875, 5.875, -9.375)
+
+[node name="shelf_mushroom8" parent="ShelfShrooms" unique_id=366246962 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.9277712, 0, 0.37314975, 0, 1, 0, -0.37314975, 0, 0.9277712, -7.875, 8, -8.875)
+
+[node name="shelf_mushroom3" parent="ShelfShrooms" unique_id=94487401 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.78704274, 0, 0.61689854, 0, 1, 0, -0.61689854, 0, -0.78704274, -7.875, 7.625, -7.25)
+
+[node name="shelf_mushroom4" parent="ShelfShrooms" unique_id=2067375844 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.61689854, 0, 0.78704274, 0, 1, 0, -0.78704274, 0, 0.61689854, -7.75, 6, -12.5)
+
+[node name="shelf_mushroom5" parent="ShelfShrooms" unique_id=1879768591 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.9198899, 0, 0.39217654, 0, 1, 0, -0.39217654, 0, -0.9198899, -8.125, 5.375, -10.375)
+
+[node name="shelf_mushroom6" parent="ShelfShrooms" unique_id=2138657765 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.6005598, 0, 0.7995798, 0, 1, 0, -0.7995798, 0, -0.6005598, -6.5, 6.75, -13.25)
+
+[node name="shelf_mushroom9" parent="ShelfShrooms" unique_id=488445952 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.79957974, 0, 0.60055983, 0, 1, 0, -0.60055983, 0, 0.79957974, -5, 6, -13.75)
+
+[node name="shelf_mushroom7" parent="ShelfShrooms" unique_id=1371979122 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.14072838, 0, 0.99004817, 0, 1, 0, -0.99004817, 0, 0.14072838, -8.25, 7.5, -11.5)
 
 [node name="Barrels" type="Node3D" parent="." unique_id=983827985]
 
 [node name="floating_platform" parent="Barrels" unique_id=1464046690 instance=ExtResource("8_khf8t")]
-transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -4.875, 3, -8.125)
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -4.875, 3, -8.125)
 move_distance = 0.25
 move_speed = 50
 
-[node name="shelf_mushroom" parent="Barrels" unique_id=1413824414 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -7.75, 6.125, -8.25)
+[node name="floating_platform2" parent="Barrels" unique_id=2132316167 instance=ExtResource("8_khf8t")]
+transform = Transform3D(0.258819, 0, 0.9659257, 0, 1, 0, -0.9659257, 0, 0.258819, -0.5, 3, -12.75)
+move_distance = 0.25
+move_speed = 50
 
-[node name="shelf_mushroom2" parent="Barrels" unique_id=1486407637 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 0, -7.75, 7.125, -7.25)
+[node name="floating_platform3" parent="Barrels" unique_id=883545389 instance=ExtResource("8_khf8t")]
+transform = Transform3D(0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710665, 1.5, 3, -12)
+move_distance = 0.25
+move_speed = 50
+
+[node name="floating_platform4" parent="Barrels" unique_id=551688451 instance=ExtResource("8_khf8t")]
+transform = Transform3D(0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710665, 5.75, 3, -8.375)
+move_distance = 0.25
+move_speed = 50
+
+[node name="floating_platform5" parent="Barrels" unique_id=1860264643 instance=ExtResource("8_khf8t")]
+transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, 1.75, 3, -16.25)
+move_distance = 0.25
+move_speed = 50
+
+[node name="floating_platform6" parent="Barrels" unique_id=262851677 instance=ExtResource("8_khf8t")]
+transform = Transform3D(0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710665, 0.875, 3, -18.5)
+move_distance = 0.25
+move_speed = 50
+
+[node name="Vines" type="Node3D" parent="." unique_id=355218416]
+
+[node name="vine" parent="Vines" unique_id=632868339 instance=ExtResource("6_f7i5e")]
+transform = Transform3D(-0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.8660253, -6.625, 4.125, -7.125)
+
+[node name="vine2" parent="Vines" unique_id=1020460606 instance=ExtResource("6_f7i5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.875, -0.75)
+
+[node name="CollisionShape3D" parent="Vines/vine2/Area3D" parent_id_path=PackedInt32Array(1020460606, 1200317447) index="0" unique_id=79552819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.032928467, 0.0625)
+
+[node name="CSGBox3D" parent="Vines/vine2/Area3D" parent_id_path=PackedInt32Array(1020460606, 1200317447) index="1" unique_id=1989857257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15673828, -0.0625)
+size = Vector3(1.5, 2.6884766, 0.125)
+
+[node name="vine3" parent="Vines" unique_id=807031244 instance=ExtResource("6_f7i5e")]
+transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, 6.375, 3.875, -6.875)
+
+[node name="vine4" parent="Vines" unique_id=2091841367 instance=ExtResource("6_f7i5e")]
+transform = Transform3D(0.25881904, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881904, 7.75, 5.5, -11.25)
+
+[node name="CollisionShape3D" parent="Vines/vine4/Area3D" parent_id_path=PackedInt32Array(2091841367, 1200317447) index="0" unique_id=79552819]
+transform = Transform3D(1.0000012, 0, 0, 0, 1, 0, 0, 0, 1.0000012, 0, 1.5954285, 0.0625)
+
+[node name="CSGBox3D" parent="Vines/vine4/Area3D" parent_id_path=PackedInt32Array(2091841367, 1200317447) index="1" unique_id=1989857257]
+transform = Transform3D(1.0000012, 0, 0, 0, 1, 0, 0, 0, 1.0000012, 0, 1.5625, -0.0625)
+size = Vector3(1.5, 2.5, 0.125)
 
 [node name="Player" parent="." unique_id=1588105895 instance=ExtResource("11_vgdfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.375, -1.625)
-collision_mask = 15
-move_speed = 5.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 1.125)
+collision_mask = 31
 
-[editable path="Walls/side_wall2"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape2"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape3"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape4"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape5"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape6"]
-[editable path="Walls/side_wall2/CSGCombiner3D/CSGBox3D/window_shape7"]
+[node name="shelf_mushroom" parent="." unique_id=772303808 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 7.25, 5.625, -7.75)
+
+[node name="shelf_mushroom2" parent="." unique_id=807543054 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 8.125, 6, -8.625)
+
+[node name="shelf_mushroom3" parent="." unique_id=1754670422 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 7.375, 6.75, -7.25)
+
+[node name="shelf_mushroom4" parent="." unique_id=860619463 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.96592593, 0, 0.25881895, 0, 1, 0, -0.25881895, 0, -0.96592593, 8, 7.5, -9.625)
+
+[node name="shelf_mushroom5" parent="." unique_id=1925959859 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.5000001, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5000001, 7.875, 5.875, -12)
+
+[node name="shelf_mushroom6" parent="." unique_id=1554436342 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.25881892, 0, 0.9659259, 0, 1, 0, -0.9659259, 0, 0.25881892, 6.625, 4.375, -13.125)
+
+[editable path="Vines/vine2"]
+[editable path="Vines/vine4"]

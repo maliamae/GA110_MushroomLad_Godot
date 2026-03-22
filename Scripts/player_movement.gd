@@ -4,11 +4,16 @@ extends CharacterBody3D
 @export_range(0.0, 1.0) var mouse_sensitivity := 0.25
 
 @export_group("Movement")
-@export var move_speed := 8.0
-@export var acceleration := 20.0
+@export var move_speed := 3.0
+@export var acceleration := 5.0
 @export var rotation_speed := 12.0
-@export var jump_impulse := 10.0
-var gravity := -30.0
+@export var jump_impulse := 6.0
+@export var dash_impulse := 15.0
+@export var is_climbing := false
+@export var can_dash := true
+@export var dash_duration := .5
+
+var gravity := -20.0
 
 var camera_input_direction := Vector2.ZERO
 
@@ -18,7 +23,7 @@ var forward
 var right
 var move_direction
 var target_angle
-@export var is_climbing := false
+
 
 @onready var camera_pivot: Node3D = %CameraPivot
 @onready var camera_3d: Camera3D = %Camera3D
@@ -61,9 +66,15 @@ func _physics_process(delta: float) -> void:
 	if is_starting_jump:
 		velocity.y += jump_impulse
 	
+	#allows jump when climbing in direction opposite the wall the player is currently climbing
 	var is_starting_jump_climb := Input.is_action_just_pressed("jump") and is_climbing
 	if is_starting_jump_climb:
-		velocity = character_model.basis.z * -jump_impulse*2.5
+		velocity = character_model.basis.z * -50.0
+	
+	#allows dashing 
+	var is_starting_dash := Input.is_action_just_pressed("dash") and can_dash
+	if is_starting_dash:
+		player_dash(delta)
 	
 	#move the character
 	move_and_slide()
@@ -107,7 +118,7 @@ func move_grounded(delta):
 	velocity.y = 0.0
 	
 	#calculate player velocity
-	velocity = velocity.move_toward(move_direction * move_speed, acceleration * delta)
+	velocity = velocity.move_toward(move_direction * move_speed, acceleration)# * delta)
 	
 	#apply gravity to character
 	velocity.y = y_velocity + gravity * delta
@@ -135,4 +146,16 @@ func move_climbing(delta):
 	move_direction = move_direction.normalized()
 	
 	#calculate player velocity
-	velocity = velocity.move_toward(move_direction * move_speed, acceleration * delta)
+	velocity = velocity.move_toward(move_direction * move_speed/2, acceleration)# * delta)
+
+func player_dash(delta):
+	can_dash = false
+	var t := 0.0
+	
+	while t < dash_duration:
+		t += delta
+		velocity += character_model.basis.z * lerpf(dash_impulse, 0.0, t/dash_duration)
+		await Engine.get_main_loop().process_frame
+	
+	await get_tree().create_timer(.35).timeout
+	can_dash = true

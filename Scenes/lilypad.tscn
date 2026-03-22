@@ -11,6 +11,7 @@ radius = 0.65
 [node name="lilypad" type="Node3D" unique_id=197424431]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=421044344]
+collision_layer = 16
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=806315224]
 shape = SubResource("CylinderShape3D_cfbem")
