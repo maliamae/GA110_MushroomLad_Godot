@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://oxtllupxk4bo"]
 
+[ext_resource type="Material" uid="uid://wvvexayxdh5n" path="res://Resources/MAT_stone.tres" id="1_gleiq"]
+
 [node name="roof" type="Node3D" unique_id=2097236321]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=993363035]
+material_override = ExtResource("1_gleiq")
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D" unique_id=357316535]
 transform = Transform3D(1, 0, 0, 0, 2.9802322e-08, -1, 0, 1, 2.9802322e-08, 0, 0, 0)

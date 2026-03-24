@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cmsy0ichub6c3"]
 
+[ext_resource type="Material" uid="uid://wvvexayxdh5n" path="res://Resources/MAT_stone.tres" id="1_d56a2"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_2usce"]
 size = Vector3(1, 9, 1.5)
 
@@ -8,6 +10,7 @@ size = Vector3(1, 9, 1.5)
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=216114472]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="StaticBody3D" unique_id=1088615657]
+material_override = ExtResource("1_d56a2")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D/CSGCombiner3D" unique_id=327628823]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4.5, 0.25)

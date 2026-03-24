@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cqm1f7q41ubug"]
 
+[ext_resource type="Material" uid="uid://wvvexayxdh5n" path="res://Resources/MAT_stone.tres" id="1_hpoy5"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_0vhsh"]
 
 [node name="wall_pillar" type="Node3D" unique_id=1635381137]
@@ -12,3 +14,4 @@ shape = SubResource("BoxShape3D_0vhsh")
 [node name="CSGBox3D" type="CSGBox3D" parent="StaticBody3D" unique_id=512008149]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.1875, 0)
 size = Vector3(1, 9.375, 1)
+material = ExtResource("1_hpoy5")

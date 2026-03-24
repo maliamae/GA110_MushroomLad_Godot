@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bqibnr7ssaboy"]
 
+[ext_resource type="Material" uid="uid://wvvexayxdh5n" path="res://Resources/MAT_stone.tres" id="1_xib1u"]
+
 [node name="stairs_unit" type="StaticBody3D" unique_id=784265451]
 
 [node name="stairs02" type="CSGCombiner3D" parent="." unique_id=36988722]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.063, 0)
+material_override = ExtResource("1_xib1u")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="stairs02" unique_id=1481957927]
 size = Vector3(0.75, 0.125, 1.5)

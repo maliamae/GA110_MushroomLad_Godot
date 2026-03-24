@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://nf2e13spbwas"]
 
+[ext_resource type="Material" uid="uid://wvvexayxdh5n" path="res://Resources/MAT_stone.tres" id="1_20k4t"]
 [ext_resource type="PackedScene" uid="uid://bqibnr7ssaboy" path="res://Scenes/stairs_unit.tscn" id="1_lqxt0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hcann"]
@@ -23,6 +24,7 @@ size = Vector3(3, 1.125, 1)
 [node name="oubliette" type="StaticBody3D" unique_id=1772476226]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=702772155]
+material_override = ExtResource("1_20k4t")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=293849960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0.625)

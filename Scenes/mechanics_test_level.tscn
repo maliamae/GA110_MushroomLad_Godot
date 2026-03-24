@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://1s7wuolsl15i" path="res://Scenes/side_wall.tscn" id="2_ym3cn"]
 [ext_resource type="PackedScene" uid="uid://8n1w1udf5a6t" path="res://Scenes/shelf_mushroom.tscn" id="3_4i73x"]
 [ext_resource type="PackedScene" uid="uid://btvurkvmy7kf6" path="res://Scenes/vine.tscn" id="4_w55uq"]
+[ext_resource type="PackedScene" uid="uid://dixws230pxqm6" path="res://Scenes/floating_platform.tscn" id="5_ym3cn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_in8hx"]
 sky_top_color = Color(0.08295094, 0.46121985, 0.7650066, 1)
@@ -72,3 +73,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, -2.875)
 
 [node name="vine2" parent="." unique_id=272916270 instance=ExtResource("4_w55uq")]
 transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 2.375, 1.125, -0.125)
+
+[node name="floating_platform" parent="." unique_id=127285192 instance=ExtResource("5_ym3cn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.875, 0.5, -3)

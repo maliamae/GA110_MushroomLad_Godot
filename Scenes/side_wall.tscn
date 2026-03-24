@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://1s7wuolsl15i"]
 
+[ext_resource type="Material" uid="uid://wvvexayxdh5n" path="res://Resources/MAT_stone.tres" id="1_c3c8k"]
 [ext_resource type="PackedScene" uid="uid://cpwf84r4sblwv" path="res://Scenes/window_shape.tscn" id="1_xscl5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dlfuf"]
@@ -12,6 +13,7 @@ collision_layer = 2
 shape = SubResource("BoxShape3D_dlfuf")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=2078856079]
+material_override = ExtResource("1_c3c8k")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=366267910]
 size = Vector3(0.5, 9, 9)
