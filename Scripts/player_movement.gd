@@ -55,6 +55,7 @@ func _physics_process(delta: float) -> void:
 	#reset the input direction to zero
 	camera_input_direction = Vector2.ZERO
 	
+	#handle which movement logic to follow (grounded movement or climbing movement)
 	if is_climbing:
 		move_climbing(delta)
 	else:
@@ -134,10 +135,12 @@ func move_climbing(delta):
 	#stores player inputs into a Vector2
 	raw_input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	
+	#moves player's forward facing direction towards the wall they are currently climbing
 	if climb_ray_cast.is_colliding():
 		var climb_direction = -climb_ray_cast.get_collision_normal()
 		target_angle = Vector3.BACK.signed_angle_to(climb_direction, Vector3.UP)
 	
+	#forward handles up and down movement, right handles left and right movement
 	forward = -character_model.basis.y
 	right = -character_model.basis.x
 	
@@ -148,6 +151,7 @@ func move_climbing(delta):
 	#calculate player velocity
 	velocity = velocity.move_toward(move_direction * move_speed/2, acceleration)# * delta)
 
+#adds forward force to player for a duration of time 
 func player_dash(delta):
 	can_dash = false
 	var t := 0.0
