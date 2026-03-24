@@ -558,6 +558,24 @@ transform = Transform3D(0.79957974, 0, 0.60055983, 0, 1, 0, -0.60055983, 0, 0.79
 [node name="shelf_mushroom7" parent="ShelfShrooms" unique_id=1371979122 instance=ExtResource("11_1sn8i")]
 transform = Transform3D(0.14072838, 0, 0.99004817, 0, 1, 0, -0.99004817, 0, 0.14072838, -8.25, 7.5, -11.5)
 
+[node name="shelf_mushroom10" parent="ShelfShrooms" unique_id=772303808 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 7.25, 5.625, -7.75)
+
+[node name="shelf_mushroom11" parent="ShelfShrooms" unique_id=807543054 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 8.125, 6, -8.625)
+
+[node name="shelf_mushroom12" parent="ShelfShrooms" unique_id=1754670422 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 7.375, 6.75, -7.25)
+
+[node name="shelf_mushroom13" parent="ShelfShrooms" unique_id=860619463 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.96592593, 0, 0.25881895, 0, 1, 0, -0.25881895, 0, -0.96592593, 8, 7.5, -9.625)
+
+[node name="shelf_mushroom14" parent="ShelfShrooms" unique_id=1925959859 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(-0.5000001, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5000001, 7.875, 5.875, -12)
+
+[node name="shelf_mushroom15" parent="ShelfShrooms" unique_id=1554436342 instance=ExtResource("11_1sn8i")]
+transform = Transform3D(0.25881892, 0, 0.9659259, 0, 1, 0, -0.9659259, 0, 0.25881892, 6.625, 4.375, -13.125)
+
 [node name="Barrels" type="Node3D" parent="." unique_id=983827985]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
@@ -613,24 +631,6 @@ size = Vector3(1.5, 2.5, 0.125)
 [node name="Player" parent="." unique_id=1588105895 instance=ExtResource("11_vgdfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.375, 1.125)
 collision_mask = 31
-
-[node name="shelf_mushroom" parent="." unique_id=772303808 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 7.25, 5.625, -7.75)
-
-[node name="shelf_mushroom2" parent="." unique_id=807543054 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 8.125, 6, -8.625)
-
-[node name="shelf_mushroom3" parent="." unique_id=1754670422 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 7.375, 6.75, -7.25)
-
-[node name="shelf_mushroom4" parent="." unique_id=860619463 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(-0.96592593, 0, 0.25881895, 0, 1, 0, -0.25881895, 0, -0.96592593, 8, 7.5, -9.625)
-
-[node name="shelf_mushroom5" parent="." unique_id=1925959859 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(-0.5000001, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.5000001, 7.875, 5.875, -12)
-
-[node name="shelf_mushroom6" parent="." unique_id=1554436342 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0.25881892, 0, 0.9659259, 0, 1, 0, -0.9659259, 0, 0.25881892, 6.625, 4.375, -13.125)
 
 [editable path="Vines/vine2"]
 [editable path="Vines/vine4"]
