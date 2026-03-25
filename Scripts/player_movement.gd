@@ -28,7 +28,9 @@ var target_angle
 @onready var camera_pivot: Node3D = %CameraPivot
 @onready var camera_3d: Camera3D = %Camera3D
 @onready var character_model: Node3D = %"animal-caterpillar2"
-@onready var animation_player: AnimationPlayer = $"animal-caterpillar2/AnimationPlayer"
+#@onready var animation_player: AnimationPlayer = $"animal-caterpillar2/AnimationPlayer"
+@onready var animation_player: AnimationPlayer = $"animal-caterpillar2/AnimationPlayer2"
+
 @onready var climb_ray_cast: RayCast3D = $"animal-caterpillar2/RayCast3D"
 
 #only rotates the camera when the mouse is clicked into the game
@@ -97,9 +99,9 @@ func _physics_process(delta: float) -> void:
 	elif is_on_floor():
 		var ground_speed := velocity.length()
 		if ground_speed > 0.0:
-			animation_player.play("walk")
+			animation_player.play("walking")
 		else:
-			animation_player.play("static")
+			animation_player.play("idle")
 
 func move_grounded(delta):
 	#stores player inputs into a Vector2
