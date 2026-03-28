@@ -40,10 +40,11 @@ func store_collectible(collectible):
 	if not stored_collectibles.has(collectible):
 		stored_collectibles.append(collectible)
 	
-	print(stored_collectibles)
+	#print(stored_collectibles)
 
 func reset_stored_list():
 	if stored_collectibles != null:
+		#print(stored_collectibles)
 		for item in stored_collectibles:
 			item.queue_free()
 		stored_collectibles.clear()
@@ -52,7 +53,9 @@ func reset_stored_list():
 
 func respawn_stored_list():
 	if stored_collectibles != null:
+		#print(stored_collectibles)
 		for item in stored_collectibles:
 			item.show()
+		stored_collectibles.clear()
 	else:
 		return
