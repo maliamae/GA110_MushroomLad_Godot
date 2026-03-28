@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 CollectibleManager="*uid://bn6gkuqjfpfp5"
+CheckpointManager="*uid://c1eiyc7sbs5tm"
 
 [input]
 
@@ -63,6 +64,7 @@ dash={
 3d_physics/layer_3="water"
 3d_physics/layer_4="collectible"
 3d_physics/layer_5="platform"
+3d_physics/layer_6="checkpoint"
 
 [physics]
 

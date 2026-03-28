@@ -1,18 +1,140 @@
 [gd_scene format=3 uid="uid://cwkpaovf5gwpm"]
 
 [ext_resource type="Script" uid="uid://bb7nma7w5kqv0" path="res://Scripts/collectible.gd" id="1_2qo34"]
+[ext_resource type="Texture2D" uid="uid://cnb0ms1xgclyr" path="res://Assets/Textures/Soft_Circle_Alpha.tga" id="3_g537i"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgwqp"]
-albedo_color = Color(1, 0.8000001, 0, 1)
+[sub_resource type="Shader" id="Shader_jgi06"]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.6.1.stable's StandardMaterial3D.
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_2qo34"]
-material = SubResource("StandardMaterial3D_sgwqp")
-top_radius = 0.15
-bottom_radius = 0.15
-height = 0.1
+shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
+
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color, filter_linear_mipmap, repeat_enable;
+uniform ivec2 albedo_texture_size;
+uniform float point_size : hint_range(0.1, 128.0, 0.1);
+
+uniform float roughness : hint_range(0.0, 1.0);
+uniform sampler2D texture_metallic : hint_default_white, filter_linear_mipmap, repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r, filter_linear_mipmap, repeat_enable;
+
+uniform float specular : hint_range(0.0, 1.0, 0.01);
+uniform float metallic : hint_range(0.0, 1.0, 0.01);
+
+uniform sampler2D texture_emission : source_color, hint_default_black, filter_linear_mipmap, repeat_enable;
+uniform vec4 emission : source_color;
+uniform float emission_energy : hint_range(0.0, 100.0, 0.01);
+
+uniform vec3 fresnel_color : source_color;
+uniform float fresnel_intensity : hint_range(0.0, 10.0, 0.01);
+
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform vec3 uv2_scale;
+uniform vec3 uv2_offset;
+
+void vertex() {
+	UV = UV * uv1_scale.xy + uv1_offset.xy;
+}
+
+vec3 fresnel_glow(float amount, float intensity, vec3 color, vec3 normal, vec3 view)
+{
+	return pow((1.0 - dot(normalize(normal), normalize(view))), amount) * color * intensity;
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+	
+	//vec3 fresnel_color = vec3(0.0, 0.7, 0.9);
+	vec3 fresnel = fresnel_glow(4.0, fresnel_intensity, fresnel_color, NORMAL, VIEW);
+
+	vec4 albedo_tex = texture(texture_albedo, base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+	ALBEDO = ALBEDO + fresnel;
+	
+	float metallic_tex = dot(texture(texture_metallic, base_uv), metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	SPECULAR = specular;
+
+	vec4 roughness_texture_channel = vec4(1.0, 0.0, 0.0, 0.0);
+	float roughness_tex = dot(texture(texture_roughness, base_uv), roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+
+	// Emission: Enabled
+	vec3 emission_tex = texture(texture_emission, base_uv).rgb;
+	// Emission Operator: Add
+	EMISSION = (emission.rgb + emission_tex) * emission_energy;
+	
+	
+	
+}
+
+
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g537i"]
+render_priority = 0
+shader = SubResource("Shader_jgi06")
+shader_parameter/albedo = Color(1, 0.65, 0, 1)
+shader_parameter/albedo_texture_size = Vector2i(0, 0)
+shader_parameter/point_size = 1.0
+shader_parameter/roughness = 1.0
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/emission = Color(0.938947, 0.72455585, 7.70092e-07, 1)
+shader_parameter/emission_energy = 0.999999977648
+shader_parameter/fresnel_color = Color(0, 0.80535775, 0.868726, 1)
+shader_parameter/fresnel_intensity = 9.99999977648
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+
+[sub_resource type="SphereMesh" id="SphereMesh_g537i"]
+material = SubResource("ShaderMaterial_g537i")
+radius = 0.15
+height = 0.3
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_jgi06"]
 radius = 0.6
+
+[sub_resource type="Curve" id="Curve_h2p6v"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -2.8740463, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_ffmqm"]
+curve = SubResource("Curve_h2p6v")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_81h6x"]
+direction = Vector3(0, 1, 0)
+spread = 90.0
+initial_velocity_min = 0.25
+initial_velocity_max = 0.75
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 0.24999776
+radial_accel_max = 0.99999774
+scale_curve = SubResource("CurveTexture_ffmqm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbp07"]
+transparency = 1
+albedo_color = Color(3.465414e-06, 0.81079894, 0.79522496, 1)
+albedo_texture = ExtResource("3_g537i")
+emission_enabled = true
+emission = Color(0.9989063, 0.82178384, 0.32340404, 1)
+emission_energy_multiplier = 0.65
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+distance_fade_mode = 1
+distance_fade_max_distance = 0.15
+
+[sub_resource type="QuadMesh" id="QuadMesh_2l7mo"]
+material = SubResource("StandardMaterial3D_qbp07")
+size = Vector2(0.15, 0.15)
 
 [node name="Coin" type="Area3D" unique_id=69247005]
 collision_layer = 8
@@ -20,9 +142,21 @@ script = ExtResource("1_2qo34")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=598351868]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("CylinderMesh_2qo34")
+mesh = SubResource("SphereMesh_g537i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1270235919]
 shape = SubResource("SphereShape3D_jgi06")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1381451640]
+amount = 5
+lifetime = 0.65
+speed_scale = 0.5
+trail_lifetime = 1.1500000000000001
+process_material = SubResource("ParticleProcessMaterial_81h6x")
+draw_pass_1 = SubResource("QuadMesh_2l7mo")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1316648113]
+light_color = Color(0.9554432, 0.803087, 0.52992153, 1)
+omni_range = 1.03
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 		platform.global_position -= Vector3.UP * (move_speed * 0.01) * delta
 	
 	#if platform exceeds depth of min height * 1.5, begin reseting to initial position
-	if platform.global_position.y < (initial_pos.y - move_distance * 1.5) && not reseting:
+	if platform.global_position.y < (initial_pos.y - move_distance * 1.5): # && not reseting:
 		reseting = true
 		is_under_player = false
 

@@ -6,6 +6,8 @@ signal collectibles_updated
 
 var collectibles : Dictionary[int, int]={}
 
+var stored_collectibles : Array
+
 func _ready() -> void:
 	reset()
 
@@ -21,7 +23,36 @@ func add_collectible(type: CollectibleType, amount :=1):
 	
 	collectibles[type] += amount
 	print(CollectibleType.keys()[type], ": ", collectibles[type])
+	
 	emit_signal("collectibles_updated")
 
 func get_amount(type: CollectibleType)-> int:
 	return collectibles.get(type, 0)
+
+func set_amount(type: CollectibleType, amount: int):
+	if collectibles.has(type):
+		collectibles[type] = amount
+	
+	respawn_stored_list()
+	emit_signal("collectibles_updated")
+
+func store_collectible(collectible):
+	if not stored_collectibles.has(collectible):
+		stored_collectibles.append(collectible)
+	
+	print(stored_collectibles)
+
+func reset_stored_list():
+	if stored_collectibles != null:
+		for item in stored_collectibles:
+			item.queue_free()
+		stored_collectibles.clear()
+	else:
+		return
+
+func respawn_stored_list():
+	if stored_collectibles != null:
+		for item in stored_collectibles:
+			item.show()
+	else:
+		return

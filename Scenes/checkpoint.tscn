@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://4xpx8h5lerjn"]
+
+[ext_resource type="Material" uid="uid://b4q8i46x8kkjy" path="res://Resources/MAT_lotus_02.tres" id="1_2cwi7"]
+[ext_resource type="Script" uid="uid://cepyevxl8umfj" path="res://Scripts/checkpoint.gd" id="1_e75gc"]
+[ext_resource type="Material" uid="uid://cd3cgcecy7lh7" path="res://Resources/MAT_lotus_01.tres" id="2_e75gc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i1pff"]
+size = Vector3(1.5, 0.875, 1.5)
+
+[node name="checkpoint" type="Area3D" unique_id=233584253]
+collision_layer = 32
+script = ExtResource("1_e75gc")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=289116056]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="CSGCombiner3D" unique_id=1833045464]
+transform = Transform3D(1.6899998, 0, 0, 0, 1, 0, 0, 0, 1.6899998, 0, 0, 0)
+radius = 0.25
+material = ExtResource("1_2cwi7")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGSphere3D" unique_id=1105456881]
+transform = Transform3D(0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0, 1, 0, 0.13714513, 0)
+operation = 2
+size = Vector3(0.375, 0.375, 1)
+material = ExtResource("1_2cwi7")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGSphere3D" unique_id=1351070468]
+transform = Transform3D(4.8428774e-08, 4.8428774e-08, 1, -0.70710677, 0.70710677, 0, -0.7071068, -0.7071068, 6.7055225e-08, 0, 0.13714513, 0)
+operation = 2
+size = Vector3(0.375, 0.375, 1)
+material = ExtResource("1_2cwi7")
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="CSGCombiner3D" unique_id=1302103006]
+transform = Transform3D(1.3575294, 0, 1.2517189, 0, 1.3459408, 0, -1.1391023, 0, 1.4917406, 0, 0.07829705, 0)
+radius = 0.20406866
+material = ExtResource("2_e75gc")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGSphere3D2" unique_id=641648494]
+transform = Transform3D(0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0, 1, 0, 0.13714513, 0)
+operation = 2
+size = Vector3(0.375, 0.375, 1)
+material = ExtResource("2_e75gc")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGSphere3D2" unique_id=957500961]
+transform = Transform3D(4.8428774e-08, 4.8428774e-08, 1, -0.70710677, 0.70710677, 0, -0.7071068, -0.7071068, 6.7055225e-08, 0, 0.13714513, 0)
+operation = 2
+size = Vector3(0.375, 0.375, 1)
+material = ExtResource("2_e75gc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=816075992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1875, 0)
+shape = SubResource("BoxShape3D_i1pff")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
