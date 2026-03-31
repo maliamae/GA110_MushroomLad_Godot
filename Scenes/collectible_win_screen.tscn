@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c2trxe7cvpuce"]
+
+[ext_resource type="Script" uid="uid://bu061jr7ckvrn" path="res://Scripts/collectible_win_screen.gd" id="1_h45x8"]
+[ext_resource type="Texture2D" uid="uid://cetebsv7dunoq" path="res://Assets/Textures/Light_Orb_UI.png" id="2_ru8ey"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my7ss"]
+bg_color = Color(0.22, 0.22, 0.22, 0.5176471)
+
+[node name="collectible_win_screen" type="CanvasLayer" unique_id=1765468864]
+script = ExtResource("1_h45x8")
+
+[node name="Panel" type="Panel" parent="." unique_id=1461214648]
+offset_right = 1152.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_my7ss")
+
+[node name="CongratsLabel" type="Label" parent="." unique_id=456324915]
+offset_left = 192.0
+offset_top = 144.0
+offset_right = 962.0
+offset_bottom = 276.0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 96
+text = "Congratulations!"
+
+[node name="TotalLabel" type="Label" parent="." unique_id=1781256322]
+offset_left = 584.0
+offset_top = 336.0
+offset_right = 710.0
+offset_bottom = 449.0
+theme_override_font_sizes/font_size = 82
+text = "4/4"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=162359244]
+offset_left = 432.0
+offset_top = 320.0
+offset_right = 560.0
+offset_bottom = 448.0
+texture = ExtResource("2_ru8ey")
+expand_mode = 1

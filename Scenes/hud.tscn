@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cpojmtkxmvcu1"]
 
 [ext_resource type="Script" uid="uid://dxhvog6hlmej3" path="res://Scripts/hud.gd" id="1_fccik"]
-[ext_resource type="Texture2D" uid="uid://cksyoir5i3xns" path="res://icon.svg" id="2_bjfho"]
+[ext_resource type="Texture2D" uid="uid://cetebsv7dunoq" path="res://Assets/Textures/Light_Orb_UI.png" id="2_fccik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gfia"]
 bg_color = Color(0.3380997, 0.33809972, 0.33809954, 0.3137255)
@@ -34,5 +34,5 @@ offset_left = 24.0
 offset_top = 24.0
 offset_right = 117.0
 offset_bottom = 117.0
-texture = ExtResource("2_bjfho")
+texture = ExtResource("2_fccik")
 expand_mode = 1

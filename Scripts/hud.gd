@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var coin_label: Label = %CoinLabel
+@onready var orb_label: Label = %CoinLabel
 
 
 var CT = CollectibleManager.CollectibleType
@@ -10,5 +10,5 @@ func _ready():
 	update_ui()
 
 func update_ui():
-	coin_label.text = "Coins: " + str(CollectibleManager.get_amount(CT.COIN))
+	orb_label.text = "Orbs: " + str(CollectibleManager.get_amount(CT.ORB))
 	
