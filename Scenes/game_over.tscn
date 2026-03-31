@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cnr87lgv2bakb"]
+
+[ext_resource type="Script" uid="uid://orxjkcfx3oso" path="res://Scripts/game_over.gd" id="1_ojehl"]
+
+[node name="game_over" type="Control" unique_id=1674449897]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ojehl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=912537149]
+layout_mode = 0
+offset_right = 1155.0
+offset_bottom = 656.0
+color = Color(0.14911404, 0.14911404, 0.14911404, 0.5294118)
+
+[node name="game_over_label" type="Label" parent="." unique_id=147529313]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 128.0
+offset_right = 847.0
+offset_bottom = 265.0
+theme_override_font_sizes/font_size = 100
+text = "Game Over"
+
+[node name="main_menu_button" type="Button" parent="." unique_id=470271286]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 360.0
+offset_right = 720.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 25
+text = "MAIN MENU
+"
+
+[node name="quit_button" type="Button" parent="." unique_id=277749804]
+layout_mode = 0
+offset_left = 432.0
+offset_top = 424.0
+offset_right = 720.0
+offset_bottom = 469.0
+theme_override_font_sizes/font_size = 25
+text = "QUIT"
+
+[connection signal="pressed" from="main_menu_button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

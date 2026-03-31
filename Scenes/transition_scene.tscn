@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bngxtjajasqsp"]
+
+[ext_resource type="Script" uid="uid://dutgnsru6q8fs" path="res://Scripts/transition_scene.gd" id="1_72rgs"]
+
+[sub_resource type="Animation" id="Animation_dk6jx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_72rgs"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9000001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ytrps"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a7285"]
+_data = {
+&"RESET": SubResource("Animation_dk6jx"),
+&"fade_in": SubResource("Animation_72rgs"),
+&"fade_out": SubResource("Animation_ytrps")
+}
+
+[node name="transition_scene" type="CanvasLayer" unique_id=1841136906]
+script = ExtResource("1_72rgs")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=465083786]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 1160.0
+offset_bottom = 656.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1014505637]
+libraries/ = SubResource("AnimationLibrary_a7285")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -3,6 +3,7 @@ extends Node
 enum CollectibleType {COIN, GEM, ORB}
 
 signal collectibles_updated
+signal collectible_added(type)
 
 var collectibles : Dictionary[int, int]={}
 #list to store collectibles collected since last checkpoint
@@ -29,6 +30,7 @@ func add_collectible(type: CollectibleType, amount :=1):
 	
 	#sends signal to UI
 	emit_signal("collectibles_updated")
+	emit_signal("collectible_added", type)
 
 func get_amount(type: CollectibleType)-> int:
 	#returns amount of collectible type

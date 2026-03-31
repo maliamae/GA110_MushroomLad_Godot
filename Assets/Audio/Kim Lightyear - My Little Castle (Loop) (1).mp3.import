@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4jlancnu5f6y"
+path="res://.godot/imported/Kim Lightyear - My Little Castle (Loop) (1).mp3-b743f87aaedd8ba877e29ef8589bbbad.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Kim Lightyear - My Little Castle (Loop) (1).mp3"
+dest_files=["res://.godot/imported/Kim Lightyear - My Little Castle (Loop) (1).mp3-b743f87aaedd8ba877e29ef8589bbbad.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

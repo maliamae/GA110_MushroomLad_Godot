@@ -1,6 +1,6 @@
 extends Node3D
 
-@onready var player: CharacterBody3D = $"../../Player"
+#@onready var player: CharacterBody3D = $"../../Player"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,8 +16,10 @@ func _process(delta: float) -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.name == "Player":
-		player.is_climbing = true
+		body.is_climbing = true
+		#player.is_climbing = true
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	if body.name == "Player":
-		player.is_climbing = false
+		body.is_climbing = false
+		#player.is_climbing = false

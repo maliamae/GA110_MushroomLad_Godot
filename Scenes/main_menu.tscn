@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://yphwhgb1ynjb"]
+
+[ext_resource type="Script" uid="uid://tl1isypu5txu" path="res://Scripts/main_menu.gd" id="1_28flt"]
+
+[node name="main_menu" type="Control" unique_id=774331194]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_28flt")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=145337187]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 29.0
+anchor_bottom = 16.5
+offset_bottom = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.28757003, 0.12619662, 0.029414628, 1)
+
+[node name="title_text" type="Label" parent="." unique_id=545278796]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 29.0
+anchor_bottom = 16.0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = -200.92004
+offset_bottom = -375.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "Mushroom Lad"
+
+[node name="play_button" type="Button" parent="." unique_id=2120174561]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 456.0
+offset_right = 712.0
+offset_bottom = 499.0
+theme_override_font_sizes/font_size = 25
+text = "PLAY"
+
+[node name="quit_button" type="Button" parent="." unique_id=1660117219]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 28.764002
+anchor_bottom = 16.137001
+offset_left = 448.0
+offset_top = 520.0
+offset_right = -438.56006
+offset_bottom = -82.48004
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "QUIT"
+
+[connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]

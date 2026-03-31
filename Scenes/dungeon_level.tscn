@@ -627,7 +627,7 @@ transform = Transform3D(0.79957974, 0, 0.60055983, 0, 1, 0, -0.60055983, 0, 0.79
 transform = Transform3D(0.14072838, 0, 0.99004817, 0, 1, 0, -0.99004817, 0, 0.14072838, -8.25, 7.5, -11.5)
 
 [node name="shelf_mushroom10" parent="ShelfShrooms" unique_id=772303808 instance=ExtResource("11_1sn8i")]
-transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 7.25, 5.625, -7.75)
+transform = Transform3D(0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, 0.9659258, 7.25, 5.5181384, -7.7887692)
 
 [node name="shelf_mushroom11" parent="ShelfShrooms" unique_id=807543054 instance=ExtResource("11_1sn8i")]
 transform = Transform3D(0.25881904, 0, 0.96592593, 0, 1, 0, -0.96592593, 0, 0.25881904, 8.125, 6, -8.625)
@@ -648,7 +648,6 @@ transform = Transform3D(0.88547474, 0, 0.4646876, 0, 1, 0, -0.4646876, 0, 0.8854
 transform = Transform3D(0.92314994, 0, -0.38444018, 0, 1, 0, 0.38444018, 0, 0.92314994, 6.2572656, 4.375, -13.378023)
 
 [node name="Barrels" type="Node3D" parent="." unique_id=983827985]
-metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="floating_platform" parent="Barrels" unique_id=1464046690 instance=ExtResource("8_khf8t")]
@@ -667,7 +666,7 @@ transform = Transform3D(0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70
 transform = Transform3D(0.86602527, 0, 0.49999994, 0, 1, 0, -0.49999994, 0, 0.86602527, 1.625, 3, -16)
 
 [node name="floating_platform6" parent="Barrels" unique_id=262851677 instance=ExtResource("8_khf8t")]
-transform = Transform3D(0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710665, 0.875, 3, -18.5)
+transform = Transform3D(0.70710665, 0, -0.70710665, 0, 1, 0, 0.70710665, 0, 0.70710665, 1.0352336, 3, -18.354113)
 
 [node name="Vines" type="Node3D" parent="." unique_id=355218416]
 metadata/_edit_group_ = true

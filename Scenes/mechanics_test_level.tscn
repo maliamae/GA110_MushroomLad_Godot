@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://8n1w1udf5a6t" path="res://Scenes/shelf_mushroom.tscn" id="3_4i73x"]
 [ext_resource type="PackedScene" uid="uid://btvurkvmy7kf6" path="res://Scenes/vine.tscn" id="4_w55uq"]
 [ext_resource type="PackedScene" uid="uid://dixws230pxqm6" path="res://Scenes/floating_platform.tscn" id="5_ym3cn"]
+[ext_resource type="PackedScene" uid="uid://8wihs5b16fmd" path="res://Scenes/moveing_platform.tscn" id="6_4i73x"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_in8hx"]
 sky_top_color = Color(0.08295094, 0.46121985, 0.7650066, 1)
@@ -37,7 +38,7 @@ size = Vector3(20, 0.5, 20)
 environment = SubResource("Environment_ehemk")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=161346677]
-transform = Transform3D(-1, -4.770465e-08, 6.008869e-08, 2.08039e-09, 0.7660444, 0.6427877, -7.669456e-08, 0.6427877, -0.7660444, 0, 0, 0)
+transform = Transform3D(-1, -4.770465e-08, 6.008869e-08, 5.5702294e-08, 0.08715561, 0.9961947, -5.2760186e-08, 0.9961947, -0.08715561, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1663886829]
@@ -76,3 +77,10 @@ transform = Transform3D(5.9604645e-08, 0, -1, 0, 1, 0, 1, 0, 5.9604645e-08, 2.37
 
 [node name="floating_platform" parent="." unique_id=127285192 instance=ExtResource("5_ym3cn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.875, 0.5, -3)
+
+[node name="moveing_platform" parent="." unique_id=2074958095 instance=ExtResource("6_4i73x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0)
+position_a = Vector3(-3, 1, 0)
+position_b = Vector3(-3, 0.5, 0)
+move_duration = 5.0
+pause_duration = 0.25

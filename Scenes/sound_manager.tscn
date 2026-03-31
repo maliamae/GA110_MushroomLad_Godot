@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dheqr0ryvsftk"]
+
+[ext_resource type="Script" uid="uid://dekmejk5jb36o" path="res://Scripts/sound_manager.gd" id="1_32i44"]
+[ext_resource type="AudioStream" uid="uid://c3yi6rdw321bs" path="res://Assets/Audio/freesound_community-chime-sound-7143 (1).mp3" id="2_25ke0"]
+
+[node name="SoundManager" type="Node" unique_id=265257526]
+script = ExtResource("1_32i44")
+
+[node name="OrbSound" type="AudioStreamPlayer" parent="." unique_id=1279200564]
+stream = ExtResource("2_25ke0")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1954951450]
