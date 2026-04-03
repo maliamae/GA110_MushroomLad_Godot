@@ -1,6 +1,49 @@
 [gd_scene format=3 uid="uid://cnr87lgv2bakb"]
 
 [ext_resource type="Script" uid="uid://orxjkcfx3oso" path="res://Scripts/game_over.gd" id="1_ojehl"]
+[ext_resource type="Texture2D" uid="uid://dywuq3xul11x3" path="res://Assets/Textures/MushroomLad_WinScreen.png" id="2_8fo1c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ek8ke"]
+bg_color = Color(0.23432186, 0.2066989, 0.53670937, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eoghk"]
+bg_color = Color(0.19634634, 0.09001627, 0.38521132, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14u15"]
+bg_color = Color(0.4248248, 0.42599282, 0.6864445, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3ryr"]
+bg_color = Color(0.33078578, 0.13327664, 0.42629296, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8fo1c"]
+bg_color = Color(0.45820004, 0.28795627, 0.5177198, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjluv"]
+bg_color = Color(0.19831324, 0.04366427, 0.3337349, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="game_over" type="Control" unique_id=1674449897]
 layout_mode = 3
@@ -9,13 +52,21 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ojehl")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=49200791]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_8fo1c")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=912537149]
+visible = false
 layout_mode = 0
 offset_right = 1155.0
 offset_bottom = 656.0
 color = Color(0.14911404, 0.14911404, 0.14911404, 0.5294118)
 
 [node name="game_over_label" type="Label" parent="." unique_id=147529313]
+visible = false
 layout_mode = 0
 offset_left = 304.0
 offset_top = 128.0
@@ -26,21 +77,27 @@ text = "Game Over"
 
 [node name="main_menu_button" type="Button" parent="." unique_id=470271286]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 360.0
-offset_right = 720.0
-offset_bottom = 405.0
-theme_override_font_sizes/font_size = 25
+offset_left = 1096.0
+offset_top = 728.0
+offset_right = 1512.0
+offset_bottom = 800.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ek8ke")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eoghk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_14u15")
 text = "MAIN MENU
 "
 
 [node name="quit_button" type="Button" parent="." unique_id=277749804]
 layout_mode = 0
-offset_left = 432.0
-offset_top = 424.0
-offset_right = 720.0
-offset_bottom = 469.0
-theme_override_font_sizes/font_size = 25
+offset_left = 1096.0
+offset_top = 832.0
+offset_right = 1512.0
+offset_bottom = 904.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_j3ryr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8fo1c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rjluv")
 text = "QUIT"
 
 [connection signal="pressed" from="main_menu_button" to="." method="_on_main_menu_button_pressed"]

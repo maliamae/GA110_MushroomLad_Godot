@@ -5,7 +5,7 @@ func _ready() -> void:
 
 
 func _on_main_menu_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	Transition.fade_to_scene("res://Scenes/main_menu.tscn")
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()

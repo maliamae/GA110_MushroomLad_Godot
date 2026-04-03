@@ -60,8 +60,8 @@ script = ExtResource("1_72rgs")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=465083786]
 offset_left = -8.0
 offset_top = -8.0
-offset_right = 1160.0
-offset_bottom = 656.0
+offset_right = 1936.0
+offset_bottom = 1104.0
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 

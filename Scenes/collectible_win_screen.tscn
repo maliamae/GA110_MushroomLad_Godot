@@ -4,37 +4,107 @@
 [ext_resource type="Texture2D" uid="uid://cetebsv7dunoq" path="res://Assets/Textures/Light_Orb_UI.png" id="2_ru8ey"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_my7ss"]
-bg_color = Color(0.22, 0.22, 0.22, 0.5176471)
+bg_color = Color(0.20946789, 0.21737751, 0.2581316, 0.5176471)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.22851416, 0.24071613, 0.27492797, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="Animation" id="Animation_ru8ey"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(856, 1088)]
+}
+
+[sub_resource type="Animation" id="Animation_7ihy7"]
+resource_name = "pop_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(856, 875), Vector2(856, 1088)]
+}
+
+[sub_resource type="Animation" id="Animation_2fjn0"]
+resource_name = "pop_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(856, 1088), Vector2(856, 875)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7ihy7"]
+_data = {
+&"RESET": SubResource("Animation_ru8ey"),
+&"pop_down": SubResource("Animation_7ihy7"),
+&"pop_up": SubResource("Animation_2fjn0")
+}
 
 [node name="collectible_win_screen" type="CanvasLayer" unique_id=1765468864]
 script = ExtResource("1_h45x8")
 
 [node name="Panel" type="Panel" parent="." unique_id=1461214648]
-offset_right = 1152.0
-offset_bottom = 649.0
+offset_left = 856.0
+offset_top = 1088.0
+offset_right = 1880.0
+offset_bottom = 1232.0004
 theme_override_styles/panel = SubResource("StyleBoxFlat_my7ss")
 
-[node name="CongratsLabel" type="Label" parent="." unique_id=456324915]
-offset_left = 192.0
-offset_top = 144.0
-offset_right = 962.0
-offset_bottom = 276.0
+[node name="CongratsLabel" type="Label" parent="Panel" unique_id=456324915]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 32.0
+offset_right = 961.0
+offset_bottom = 115.0
 size_flags_horizontal = 0
-theme_override_font_sizes/font_size = 96
-text = "Congratulations!"
+theme_override_font_sizes/font_size = 60
+text = "Achievment: Collect All Orbs"
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=162359244]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 120.0
+texture = ExtResource("2_ru8ey")
+expand_mode = 1
 
 [node name="TotalLabel" type="Label" parent="." unique_id=1781256322]
-offset_left = 584.0
-offset_top = 336.0
-offset_right = 710.0
-offset_bottom = 449.0
+visible = false
+offset_left = 960.0
+offset_top = 512.0
+offset_right = 1086.0
+offset_bottom = 625.0
 theme_override_font_sizes/font_size = 82
 text = "4/4"
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=162359244]
-offset_left = 432.0
-offset_top = 320.0
-offset_right = 560.0
-offset_bottom = 448.0
-texture = ExtResource("2_ru8ey")
-expand_mode = 1
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=778028242]
+root_node = NodePath("../Panel")
+libraries/ = SubResource("AnimationLibrary_7ihy7")

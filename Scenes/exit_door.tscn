@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://i041otj2rcj6"]
 
 [ext_resource type="Material" uid="uid://t4bwjlcnbqm4" path="res://Resources/MAT_barrel.tres" id="1_elbft"]
+[ext_resource type="Script" uid="uid://cush0ue72b07e" path="res://Scripts/exit_door.gd" id="2_b4nh8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_888in"]
+size = Vector3(1.5, 2.25, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dog84"]
+size = Vector3(1.5, 2.25, 1.25)
 
 [node name="exit_door" type="Node3D" unique_id=871154657]
 
@@ -17,3 +22,11 @@ size = Vector3(1.25, 2.25, 0.25)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1105305048]
 shape = SubResource("BoxShape3D_888in")
 debug_fill = false
+
+[node name="Area3D" type="Area3D" parent="." unique_id=414759698]
+script = ExtResource("2_b4nh8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=964584021]
+shape = SubResource("BoxShape3D_dog84")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

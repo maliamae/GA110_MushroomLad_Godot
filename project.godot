@@ -21,6 +21,7 @@ CollectibleManager="*uid://bn6gkuqjfpfp5"
 CheckpointManager="*uid://c1eiyc7sbs5tm"
 Transition="*uid://bngxtjajasqsp"
 SoundManager="*uid://dheqr0ryvsftk"
+RespawnManager="*uid://dec5iky40tut"
 
 [display]
 

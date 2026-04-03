@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://bk86aoqn68uru"]
+
+[ext_resource type="Script" uid="uid://btc73f18ssfku" path="res://Scripts/respawn_screen.gd" id="1_0plbd"]
+[ext_resource type="Texture2D" uid="uid://cetebsv7dunoq" path="res://Assets/Textures/Light_Orb_UI.png" id="1_qa43b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_roayf"]
+bg_color = Color(0.20688328, 0.21711764, 0.26504335, 0.5176471)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qa43b"]
+bg_color = Color(0.25298876, 0.28374994, 0.36145687, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0plbd"]
+bg_color = Color(0.17637816, 0.20066479, 0.26147223, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3l78h"]
+bg_color = Color(0.35086915, 0.42139542, 0.5520047, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypvbn"]
+bg_color = Color(0.61264396, 0.21331137, 0.26066795, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv0na"]
+bg_color = Color(0.40934885, 0.0754532, 0.19363403, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ht7p"]
+bg_color = Color(0.6679234, 0.31232086, 0.1851809, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="respawn_screen" type="CanvasLayer" unique_id=1416484855]
+script = ExtResource("1_0plbd")
+
+[node name="Panel" type="Panel" parent="." unique_id=1923835332]
+offset_right = 1936.0
+offset_bottom = 1096.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_roayf")
+
+[node name="DeathLabel" type="Label" parent="." unique_id=108525396]
+offset_left = 368.0
+offset_top = 128.0
+offset_right = 1552.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 180
+text = "You Drowned"
+
+[node name="RespawnButton" type="Button" parent="." unique_id=301699766]
+offset_left = 768.0
+offset_top = 768.0
+offset_right = 1184.0
+offset_bottom = 840.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_qa43b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0plbd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3l78h")
+text = "RESPAWN"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1204647298]
+offset_left = 768.0
+offset_top = 872.0
+offset_right = 1184.0
+offset_bottom = 944.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypvbn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gv0na")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2ht7p")
+text = "QUIT"
+
+[node name="OrbLabel" type="Label" parent="." unique_id=195277186]
+offset_left = 976.0
+offset_top = 464.0
+offset_right = 1152.0
+offset_bottom = 635.0
+theme_override_font_sizes/font_size = 125
+text = "-/4"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1397607359]
+offset_left = 792.0
+offset_top = 480.0
+offset_right = 952.0
+offset_bottom = 640.0
+texture = ExtResource("1_qa43b")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="pressed" from="RespawnButton" to="." method="_on_respawn_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cetebsv7dunoq" path="res://Assets/Textures/Light_Orb_UI.png" id="2_fccik"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gfia"]
-bg_color = Color(0.3380997, 0.33809972, 0.33809954, 0.3137255)
+bg_color = Color(0.31195682, 0.33858353, 0.3890526, 0.3137255)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
@@ -14,25 +14,26 @@ corner_radius_bottom_left = 20
 script = ExtResource("1_fccik")
 
 [node name="Panel" type="Panel" parent="." unique_id=1513674000]
-offset_left = 76.0
-offset_top = 39.0
-offset_right = 371.0
-offset_bottom = 102.0
+offset_left = 112.0
+offset_top = 56.0
+offset_right = 488.0
+offset_bottom = 160.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_3gfia")
 
 [node name="CoinLabel" type="Label" parent="." unique_id=45717917]
 unique_name_in_owner = true
-offset_left = 138.0
-offset_top = 43.0
-offset_right = 351.0
-offset_bottom = 98.0
-theme_override_font_sizes/font_size = 40
+offset_left = 200.0
+offset_top = 64.0
+offset_right = 456.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 60
 text = "x"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=457791417]
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 117.0
-offset_bottom = 117.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 176.0
+offset_bottom = 176.0
 texture = ExtResource("2_fccik")
 expand_mode = 1
+stretch_mode = 4

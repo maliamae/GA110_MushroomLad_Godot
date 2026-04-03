@@ -1,6 +1,53 @@
 [gd_scene format=3 uid="uid://yphwhgb1ynjb"]
 
 [ext_resource type="Script" uid="uid://tl1isypu5txu" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://bbc72tketo06l" path="res://Assets/Textures/MushroomLad_StartScreen.png" id="2_48xlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0.4120893, 0.13600114, 0.30423447, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+bg_color = Color(0.35144192, 0.095707454, 0.36584708, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.72245103, 0.29423407, 0.23591453, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ce3w2"]
+bg_color = Color(0.28676233, 0.0049743373, 0.16440755, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opfnp"]
+bg_color = Color(0.21287048, 0.009092771, 0.15995464, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+bg_color = Color(0.5137255, 0.101960786, 0.17254902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="main_menu" type="Control" unique_id=774331194]
 layout_mode = 3
@@ -9,17 +56,26 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_28flt")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=757332009]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_48xlc")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=145337187]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 29.0
 anchor_bottom = 16.5
-offset_bottom = -6.1035156e-05
+offset_right = 775.0
+offset_bottom = 439.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.28757003, 0.12619662, 0.029414628, 1)
 
 [node name="title_text" type="Label" parent="." unique_id=545278796]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 29.0
@@ -35,11 +91,14 @@ text = "Mushroom Lad"
 
 [node name="play_button" type="Button" parent="." unique_id=2120174561]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 456.0
-offset_right = 712.0
-offset_bottom = 499.0
-theme_override_font_sizes/font_size = 25
+offset_left = 816.0
+offset_top = 808.0
+offset_right = 1232.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_1ehe0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n45e2")
 text = "PLAY"
 
 [node name="quit_button" type="Button" parent="." unique_id=1660117219]
@@ -47,13 +106,16 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 28.764002
 anchor_bottom = 16.137001
-offset_left = 448.0
-offset_top = 520.0
-offset_right = -438.56006
-offset_bottom = -82.48004
+offset_left = 816.0
+offset_top = 912.0
+offset_right = 81.43994
+offset_bottom = 338.51996
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 25
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxFlat_ce3w2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cp0ys")
 text = "QUIT"
 
 [connection signal="pressed" from="play_button" to="." method="_on_play_button_pressed"]
