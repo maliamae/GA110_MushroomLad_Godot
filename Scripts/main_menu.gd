@@ -6,7 +6,7 @@ func _ready() -> void:
 
 func _on_play_button_pressed() -> void:
 	Transition.fade_to_scene("res://Scenes/dungeon_level.tscn")
-	print("play transition")
+	#print("play transition")
 	#get_tree().change_scene_to_file("res://Scenes/dungeon_level.tscn")
 
 
