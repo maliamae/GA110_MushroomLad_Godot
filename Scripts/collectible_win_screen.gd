@@ -17,7 +17,7 @@ func win_screen():
 		show()
 		animation_player.play("pop_up")
 		print("achievment")
-		await get_tree().create_timer(4).timeout
+		await get_tree().create_timer(2).timeout
 		animation_player.play("pop_down")
 		await get_tree().create_timer(1.5).timeout
 		hide();

@@ -33,6 +33,18 @@ var target_angle
 
 @onready var climb_ray_cast: RayCast3D = $"animal-caterpillar2/RayCast3D"
 
+signal player_jumps
+signal player_dashes
+signal player_walks
+signal player_stops
+
+var isWalking := false
+
+func _ready() -> void:
+	player_jumps.connect(SoundManager.player_jump_sfx)
+	player_dashes.connect(SoundManager.player_dash_sfx)
+	player_walks.connect(SoundManager.player_walk_sfx)
+
 #only rotates the camera when the mouse is clicked into the game
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("left_click"):
@@ -82,6 +94,13 @@ func _physics_process(delta: float) -> void:
 	#move the character
 	move_and_slide()
 	
+	if (move_direction != Vector3.ZERO) && is_on_floor() && not isWalking:
+		emit_signal("player_walks")
+		isWalking = true
+	elif (move_direction == Vector3.ZERO):
+		emit_signal("player_stops")
+		isWalking = false
+	
 	#smooth out character direction while turning
 	character_model.global_rotation.y = lerp_angle(
 		character_model.rotation.y, 
@@ -91,6 +110,7 @@ func _physics_process(delta: float) -> void:
 	
 	#play animations
 	if is_starting_jump:
+		emit_signal("player_jumps")
 		#animation_player.play("jump")
 		pass
 	elif not is_on_floor() and velocity.y < 0:
@@ -155,6 +175,7 @@ func move_climbing(delta):
 
 #adds forward force to player for a duration of time 
 func player_dash(delta):
+	emit_signal("player_dashes")
 	can_dash = false
 	var t := 0.0
 	
