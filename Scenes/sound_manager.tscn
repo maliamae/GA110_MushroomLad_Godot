@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dekmejk5jb36o" path="res://Scripts/sound_manager.gd" id="1_32i44"]
 [ext_resource type="AudioStream" uid="uid://c3yi6rdw321bs" path="res://Assets/Audio/freesound_community-chime-sound-7143 (1).mp3" id="2_25ke0"]
+[ext_resource type="AudioStream" uid="uid://botylnxw5usix" path="res://Assets/Audio/MushroomLad_JumpSFX.mp3" id="3_wyfeo"]
+[ext_resource type="AudioStream" uid="uid://brnyt0ayqa4ap" path="res://Assets/Audio/MushroomLad_AltWalkLoop_SFX.mp3" id="4_wyfeo"]
+[ext_resource type="AudioStream" uid="uid://uusxdhfsf6kj" path="res://Assets/Audio/MushroomLad_DashSFX (1).mp3" id="5_08tfe"]
 
 [node name="SoundManager" type="Node" unique_id=265257526]
 script = ExtResource("1_32i44")
@@ -10,5 +13,15 @@ script = ExtResource("1_32i44")
 stream = ExtResource("2_25ke0")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1954951450]
+volume_db = -4.5
 
-[node name="PlayerSound" type="AudioStreamPlayer" parent="." unique_id=1281256583]
+[node name="JumpSound" type="AudioStreamPlayer" parent="." unique_id=1281256583]
+stream = ExtResource("3_wyfeo")
+
+[node name="PlayerWalkSound" type="AudioStreamPlayer" parent="." unique_id=748759158]
+stream = ExtResource("4_wyfeo")
+volume_db = -4.374
+pitch_scale = 1.82
+
+[node name="DashSound" type="AudioStreamPlayer" parent="." unique_id=232724129]
+stream = ExtResource("5_08tfe")

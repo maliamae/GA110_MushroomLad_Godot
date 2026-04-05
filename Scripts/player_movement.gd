@@ -35,8 +35,7 @@ var target_angle
 
 signal player_jumps
 signal player_dashes
-signal player_walks
-signal player_stops
+signal player_walks(speed, isPossible)
 
 var isWalking := false
 
@@ -94,12 +93,12 @@ func _physics_process(delta: float) -> void:
 	#move the character
 	move_and_slide()
 	
-	if (move_direction != Vector3.ZERO) && is_on_floor() && not isWalking:
-		emit_signal("player_walks")
+	if ((move_direction > Vector3.ZERO) && is_on_floor() && not is_climbing):
 		isWalking = true
-	elif (move_direction == Vector3.ZERO):
-		emit_signal("player_stops")
+	else:
 		isWalking = false
+	
+	emit_signal("player_walks", move_direction, isWalking)
 	
 	#smooth out character direction while turning
 	character_model.global_rotation.y = lerp_angle(

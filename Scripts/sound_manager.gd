@@ -2,13 +2,15 @@ extends Node
 
 @onready var orb_sound: AudioStreamPlayer = $OrbSound
 @onready var music_player: AudioStreamPlayer = $MusicPlayer
-@onready var player_sound: AudioStreamPlayer = $PlayerSound
+@onready var jump_sound: AudioStreamPlayer = $JumpSound
+@onready var dash_sound: AudioStreamPlayer = $DashSound
+@onready var player_walk_sound: AudioStreamPlayer = $PlayerWalkSound
 
 var main_menu_music = preload("res://Assets/Audio/dreams.ogg")
 var gameplay_music = preload("res://Assets/Audio/kim_lightyear_-_illusion (1).mp3")
 var game_over_music = preload("res://Assets/Audio/Kim Lightyear - My Little Castle (Loop) (1).mp3")
 
-var player_walk_sound = preload("res://Assets/Audio/MushroomLad_WalkLoopSFX.mp3")
+#var player_walk_sound = preload("res://Assets/Audio/MushroomLad_WalkLoopSFX.mp3")
 var player_dash_sound = preload("res://Assets/Audio/MushroomLad_DashSFX (1).mp3")
 var player_jump_sound = preload("res://Assets/Audio/MushroomLad_JumpSFX.mp3")
 
@@ -43,18 +45,18 @@ func play_music(stream: AudioStream):
 	music_player.stream = stream
 	music_player.play()
 
-func player_walk_sfx():
-	
-	player_sound.stream = player_walk_sfx()
-	player_sound.play()
+func player_walk_sfx(speed: Vector3, isPossible: bool):
+	if (speed != Vector3.ZERO && isPossible && not player_walk_sound.is_playing()):
+		player_walk_sound.play()
+	elif (speed == Vector3.ZERO && player_walk_sound.is_playing()):
+		player_walk_sound.stop()
+	#player_sound.stream = player_walk_sfx()
+	#player_sound.play()
 
 func player_jump_sfx():
-	player_sound.stream = player_jump_sfx()
-	player_sound.play()
+	#player_sound.stream = player_jump_sfx()
+	jump_sound.play()
 
 func player_dash_sfx():
-	player_sound.stream = player_dash_sfx()
-	player_sound.play()
-
-func player_stops_walk():
-	player_sound.stop()
+	#player_sound.stream = player_dash_sfx()
+	dash_sound.play()

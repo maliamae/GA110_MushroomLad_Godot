@@ -7,7 +7,7 @@
 size = Vector3(1.5, 2.25, 0.25)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dog84"]
-size = Vector3(1.5, 2.25, 1.25)
+size = Vector3(2.25, 2.5, 2.5)
 
 [node name="exit_door" type="Node3D" unique_id=871154657]
 
@@ -27,6 +27,7 @@ debug_fill = false
 script = ExtResource("2_b4nh8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=964584021]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.125, 0)
 shape = SubResource("BoxShape3D_dog84")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
