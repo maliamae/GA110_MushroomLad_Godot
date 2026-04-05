@@ -1,7 +1,7 @@
 extends Node
 
 var respawn_pos : Vector3
-var saved_rays : int
+var saved_rays := 0
 
 var type : CollectibleManager.CollectibleType
 var amount 
@@ -26,6 +26,8 @@ func reset():
 	#resets scene with original respawn point at beginning of level
 	await get_tree().create_timer(.5).timeout
 	respawn_pos = Vector3(0.0, 3.956, -1.4)
+	saved_rays = 0
+	emit_signal("reset_rays", CollectibleManager.CollectibleType.ORB, saved_rays)
 
 func respawn_player():
 	#when triggered, signals to collectible manager to reset to saved number of collectibles

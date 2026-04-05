@@ -81,8 +81,8 @@ radius = 3.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_ueaie"]
 size = Vector3(1.5469971, 5, 0.74694824)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fvcit"]
-size = Vector3(1.5, 2.5, 0.375)
+[sub_resource type="BoxShape3D" id="BoxShape3D_yfyfy"]
+size = Vector3(1.5, 1.75, 0.375)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2fw8m"]
 size = Vector3(1.5, 3.7598877, 0.375)
@@ -364,6 +364,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, -15.5)
 
 [node name="EndPlatform" type="Node3D" parent="." unique_id=2126368457]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -25.20263)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="EndPlatform" type="StaticBody3D" parent="EndPlatform" unique_id=745904705]
 
@@ -720,12 +722,12 @@ transform = Transform3D(-0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, -0.8
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.875, -0.75)
 
 [node name="CollisionShape3D" parent="Vines/vine2/Area3D" parent_id_path=PackedInt32Array(1020460606, 1200317447) index="0" unique_id=79552819]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15792847, 0.0625)
-shape = SubResource("BoxShape3D_fvcit")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53292847, 0.0625)
+shape = SubResource("BoxShape3D_yfyfy")
 
 [node name="CSGBox3D" parent="Vines/vine2/Area3D" parent_id_path=PackedInt32Array(1020460606, 1200317447) index="1" unique_id=1989857257]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15673828, -0.0625)
-size = Vector3(1.5, 2.6884766, 0.125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56347656, -0.0625)
+size = Vector3(1.5, 1.875, 0.125)
 
 [node name="vine3" parent="Vines" unique_id=807031244 instance=ExtResource("6_f7i5e")]
 transform = Transform3D(-0.8660254, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660254, 6.375, 3.875, -6.875)

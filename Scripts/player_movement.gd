@@ -24,6 +24,8 @@ var right
 var move_direction
 var target_angle
 
+var isDead := false
+
 
 @onready var camera_pivot: Node3D = %CameraPivot
 @onready var camera_3d: Camera3D = %Camera3D
@@ -58,69 +60,70 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera_input_direction = event.screen_relative * mouse_sensitivity
 
 func _physics_process(delta: float) -> void:
-	#rotate around the x-axis
-	camera_pivot.rotation.x += camera_input_direction.y * delta
-	#clamp the rotation
-	camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, -PI / 6.0, PI/3.0)
-	#rotate around the y-axis
-	camera_pivot.rotation.y -= camera_input_direction.x * delta
-	
-	#reset the input direction to zero
-	camera_input_direction = Vector2.ZERO
-	
-	#handle which movement logic to follow (grounded movement or climbing movement)
-	if is_climbing:
-		move_climbing(delta)
-	else:
-		move_grounded(delta)
-	
-	
-	#allow jumps only when on the floor
-	var is_starting_jump := Input.is_action_just_pressed("jump") and is_on_floor()
-	if is_starting_jump:
-		velocity.y += jump_impulse
-	
-	#allows jump when climbing in direction opposite the wall the player is currently climbing
-	var is_starting_jump_climb := Input.is_action_just_pressed("jump") and is_climbing
-	if is_starting_jump_climb:
-		velocity = character_model.basis.z * -50.0
-	
-	#allows dashing 
-	var is_starting_dash := Input.is_action_just_pressed("dash") and can_dash
-	if is_starting_dash:
-		player_dash(delta)
-	
-	#move the character
-	move_and_slide()
-	
-	if ((move_direction > Vector3.ZERO) && is_on_floor() && not is_climbing):
-		isWalking = true
-	else:
-		isWalking = false
-	
-	emit_signal("player_walks", move_direction, isWalking)
-	
-	#smooth out character direction while turning
-	character_model.global_rotation.y = lerp_angle(
-		character_model.rotation.y, 
-		target_angle, 
-		rotation_speed * delta
-	)
-	
-	#play animations
-	if is_starting_jump:
-		emit_signal("player_jumps")
-		#animation_player.play("jump")
-		pass
-	elif not is_on_floor() and velocity.y < 0:
-		#animation_player.play("fall")
-		pass
-	elif is_on_floor():
-		var ground_speed := velocity.length()
-		if ground_speed > 0.0:
-			animation_player.play("walking")
+	if not isDead:
+		#rotate around the x-axis
+		camera_pivot.rotation.x += camera_input_direction.y * delta
+		#clamp the rotation
+		camera_pivot.rotation.x = clamp(camera_pivot.rotation.x, -PI / 6.0, PI/3.0)
+		#rotate around the y-axis
+		camera_pivot.rotation.y -= camera_input_direction.x * delta
+		
+		#reset the input direction to zero
+		camera_input_direction = Vector2.ZERO
+		
+		#handle which movement logic to follow (grounded movement or climbing movement)
+		if is_climbing:
+			move_climbing(delta)
 		else:
-			animation_player.play("idle")
+			move_grounded(delta)
+		
+		
+		#allow jumps only when on the floor
+		var is_starting_jump := Input.is_action_just_pressed("jump") and is_on_floor()
+		if is_starting_jump:
+			velocity.y += jump_impulse
+		
+		#allows jump when climbing in direction opposite the wall the player is currently climbing
+		var is_starting_jump_climb := Input.is_action_just_pressed("jump") and is_climbing
+		if is_starting_jump_climb:
+			velocity = character_model.basis.z * -50.0
+		
+		#allows dashing 
+		var is_starting_dash := Input.is_action_just_pressed("dash") and can_dash
+		if is_starting_dash:
+			player_dash(delta)
+		
+		#move the character
+		move_and_slide()
+		
+		if ((move_direction > Vector3.ZERO) && is_on_floor() && not is_climbing):
+			isWalking = true
+		else:
+			isWalking = false
+		
+		emit_signal("player_walks", move_direction, isWalking)
+		
+		#smooth out character direction while turning
+		character_model.global_rotation.y = lerp_angle(
+			character_model.rotation.y, 
+			target_angle, 
+			rotation_speed * delta
+		)
+		
+		#play animations
+		if is_starting_jump:
+			emit_signal("player_jumps")
+			#animation_player.play("jump")
+			pass
+		elif not is_on_floor() and velocity.y < 0:
+			#animation_player.play("fall")
+			pass
+		elif is_on_floor():
+			var ground_speed := velocity.length()
+			if ground_speed > 0.0:
+				animation_player.play("walking")
+			else:
+				animation_player.play("idle")
 
 func move_grounded(delta):
 	#stores player inputs into a Vector2

@@ -15,6 +15,8 @@ func _ready() -> void:
 func _on_body_entered(body: Node3D) -> void:
 	#kill player
 	if body.name == "Player":
+		await get_tree().create_timer(.25).timeout
+		body.isDead = true
 		#get_tree().reload_current_scene()
 		emit_signal("player_died", body)
 		emit_signal("player_drowned")

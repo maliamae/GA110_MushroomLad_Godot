@@ -59,7 +59,9 @@ func reset_stored_list():
 	if stored_collectibles != null:
 		#print(stored_collectibles)
 		for item in stored_collectibles:
-			item.queue_free()
+			if is_instance_valid(item):
+				item.queue_free()
+				item = null
 		stored_collectibles.clear()
 	else:
 		return
@@ -70,7 +72,8 @@ func respawn_stored_list():
 	if stored_collectibles != null:
 		#print(stored_collectibles)
 		for item in stored_collectibles:
-			item.show()
+			if is_instance_valid(item):
+				item.show()
 		stored_collectibles.clear()
 	else:
 		return
