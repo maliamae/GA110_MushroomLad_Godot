@@ -4,7 +4,6 @@ var respawn_pos : Vector3
 var saved_rays := 0
 
 var type : CollectibleManager.CollectibleType
-var amount 
 
 #signal to notify collectible manager of a new checkpoint being established
 signal checkpoint_updated

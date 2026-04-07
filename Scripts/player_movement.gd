@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 		
 		#handle which movement logic to follow (grounded movement or climbing movement)
 		if is_climbing:
-			move_climbing(delta)
+			move_climbing()
 		else:
 			move_grounded(delta)
 		
@@ -155,7 +155,7 @@ func move_grounded(delta):
 	#turn toward the last movement direction
 	target_angle = Vector3.BACK.signed_angle_to(last_movement_direction, Vector3.UP)
 
-func move_climbing(delta):
+func move_climbing():
 	#stores player inputs into a Vector2
 	raw_input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	

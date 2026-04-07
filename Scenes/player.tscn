@@ -4,6 +4,172 @@
 [ext_resource type="PackedScene" uid="uid://d2uovq0jvwhy" path="res://Assets/Character_Model/animal-caterpillar.glb" id="1_v0iea"]
 [ext_resource type="Texture2D" uid="uid://c2d34se8ldv7j" path="res://Assets/Character_Model/mushroom_creature_0.png" id="3_6t5aa"]
 
+[sub_resource type="Animation" id="Animation_v0iea"]
+resource_name = "run"
+length = 0.25
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-caterpillar/root/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.052335963, 0, 0, -0.99862957, 0.033333335, 1, -0.033591267, 0, 0, -0.99943566, 0.06666667, 1, 0.0047996407, 0, 0, -0.9999885, 0.1, 1, 0.039259817, 0, 0, -0.9992291, 0.13333334, 1, 0.047978126, 0, 0, -0.99884844, 0.16666667, 1, 0.023995971, 0, 0, -0.99971217, 0.2, 1, -0.010471787, 0, 0, -0.99994516, 0.25, 1, -0.052335963, 0, 0, -0.99862957)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-caterpillar/root/leg-front-left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.64278764, 0, 0, -0.7660445, 0.033333335, 1, 0.43313476, 0, 0, -0.90132916, 0.06666667, 1, -0.06395179, 0, 0, -0.99795306, 0.1, 1, -0.5, 0, 0, -0.86602545, 0.13333334, 1, -0.59715855, 0, 0, -0.80212325, 0.16666667, 1, -0.3145447, 0, 0, -0.94924265, 0.2, 1, 0.13917315, 0, 0, -0.9902681, 0.25, 1, 0.64278764, 0, 0, -0.7660445)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-caterpillar/root/leg-front-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0.64278764, 0, 0, -0.7660445, 0.033333335, 1, 0.43313476, 0, 0, -0.90132916, 0.06666667, 1, -0.06395179, 0, 0, -0.99795306, 0.1, 1, -0.5, 0, 0, -0.86602545, 0.13333334, 1, -0.59715855, 0, 0, -0.80212325, 0.16666667, 1, -0.3145447, 0, 0, -0.94924265, 0.2, 1, 0.13917315, 0, 0, -0.9902681, 0.25, 1, 0.64278764, 0, 0, -0.7660445)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-caterpillar/root/leg-back-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.64278764, 0, 0, -0.7660445, 0.033333335, 1, -0.43313476, 0, 0, -0.90132916, 0.06666667, 1, 0.06395179, 0, 0, -0.99795306, 0.1, 1, 0.5, 0, 0, -0.86602545, 0.13333334, 1, 0.59715855, 0, 0, -0.80212325, 0.16666667, 1, 0.3145447, 0, 0, -0.94924265, 0.2, 1, -0.13917315, 0, 0, -0.9902681, 0.25, 1, -0.64278764, 0, 0, -0.7660445)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("animal-caterpillar/root/leg-back-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, -0.64278764, 0, 0, -0.7660445, 0.033333335, 1, -0.43313476, 0, 0, -0.90132916, 0.06666667, 1, 0.06395179, 0, 0, -0.99795306, 0.1, 1, 0.5, 0, 0, -0.86602545, 0.13333334, 1, 0.59715855, 0, 0, -0.80212325, 0.16666667, 1, 0.3145447, 0, 0, -0.94924265, 0.2, 1, -0.13917315, 0, 0, -0.9902681, 0.25, 1, -0.64278764, 0, 0, -0.7660445)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("animal-caterpillar/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.080000006, 0, 0.06666667, 1, 0, 0.14125, 0, 0.1, 1, 0, 0.0675, 0, 0.13333334, 1, 0, -0.0025000023, 0, 0.16666667, 1, 0, -0.0062499987, 0, 0.2, 1, 0, 0, 0, 0.25, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("animal-caterpillar/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_cvnsp"]
+resource_name = "static"
+length = 0.1
+tracks/0/type = "position_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-caterpillar/root")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-caterpillar/root")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-caterpillar/root/leg-front-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-caterpillar/root/leg-front-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("animal-caterpillar/root/leg-back-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/5/type = "rotation_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("animal-caterpillar/root/leg-back-left")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("animal-caterpillar/root/body")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
+
+[sub_resource type="Animation" id="Animation_6t5aa"]
+resource_name = "walk"
+length = 0.5
+tracks/0/type = "rotation_3d"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("animal-caterpillar/root/body")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.0012179748, 0.034878235, -0.034878235, -0.99878204, 0.033333335, 1, 0.0009928149, 0.031493317, -0.031493317, -0.99900717, 0.06666667, 1, 0.00051342556, 0.022653079, -0.022653079, -0.9994866, 0.1, 1, 0.00010675371, 0.010331616, -0.010331616, -0.99989325, 0.13333334, 1, 1.2148599e-05, -0.0034854629, 0.0034854629, -0.99998784, 0.16666667, 1, 0.00028244447, -0.016803712, 0.016803712, -0.9997176, 0.2, 1, 0.0007641077, -0.027631935, 0.027631935, -0.9992359, 0.23333333, 1, 0.001156718, -0.033990882, 0.033990882, -0.9988434, 0.26666668, 1, 0.0011567177, -0.033990875, 0.033990875, -0.9988433, 0.3, 1, 0.00076410733, -0.02763193, 0.02763193, -0.9992359, 0.33333334, 1, 0.0002824443, -0.016803706, 0.016803706, -0.9997176, 0.36666667, 1, 1.2148557e-05, -0.0034854568, 0.0034854568, -0.99998784, 0.4, 1, 0.00010675384, 0.010331617, -0.010331617, -0.9998933, 0.43333334, 1, 0.00051342585, 0.022653082, -0.022653082, -0.99948657, 0.5, 1, 0.0012179748, 0.034878235, -0.034878235, -0.99878204)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("animal-caterpillar/root/leg-front-left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0.42261833, 0, 0, -0.9063079, 0.033333335, 1, 0.38381788, 0, 0, -0.92340887, 0.06666667, 1, 0.27948767, 0, 0, -0.9601493, 0.1, 1, 0.1287956, 0, 0, -0.99167114, 0.13333334, 1, -0.04355483, 0, 0, -0.99905103, 0.16666667, 1, -0.20854394, 0, 0, -0.978013, 0.2, 1, -0.3387379, 0, 0, -0.9408808, 0.23333333, 1, -0.41251555, 0, 0, -0.9109506, 0.26666668, 1, -0.41251564, 0, 0, -0.91095054, 0.3, 1, -0.33873788, 0, 0, -0.9408808, 0.33333334, 1, -0.20854388, 0, 0, -0.97801304, 0.36666667, 1, -0.043554798, 0, 0, -0.99905103, 0.4, 1, 0.12879558, 0, 0, -0.99167114, 0.43333334, 1, 0.27948773, 0, 0, -0.9601493, 0.5, 1, 0.4226183, 0, 0, -0.9063078)
+tracks/2/type = "rotation_3d"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("animal-caterpillar/root/leg-front-right")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, -0.42261833, 0, 0, -0.9063079, 0.033333335, 1, -0.38381788, 0, 0, -0.92340887, 0.06666667, 1, -0.27948767, 0, 0, -0.9601493, 0.1, 1, -0.1287956, 0, 0, -0.99167114, 0.13333334, 1, 0.04355483, 0, 0, -0.99905103, 0.16666667, 1, 0.20854394, 0, 0, -0.978013, 0.2, 1, 0.3387379, 0, 0, -0.9408808, 0.23333333, 1, 0.41251555, 0, 0, -0.9109506, 0.26666668, 1, 0.41251564, 0, 0, -0.91095054, 0.3, 1, 0.33873788, 0, 0, -0.9408808, 0.33333334, 1, 0.20854388, 0, 0, -0.97801304, 0.36666667, 1, 0.043554798, 0, 0, -0.99905103, 0.4, 1, -0.12879558, 0, 0, -0.99167114, 0.43333334, 1, -0.27948773, 0, 0, -0.9601493, 0.5, 1, -0.4226183, 0, 0, -0.9063078)
+tracks/3/type = "rotation_3d"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("animal-caterpillar/root/leg-back-left")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, -0.42261833, 0, 0, -0.9063079, 0.033333335, 1, -0.38381788, 0, 0, -0.92340887, 0.06666667, 1, -0.27948767, 0, 0, -0.9601493, 0.1, 1, -0.1287956, 0, 0, -0.99167114, 0.13333334, 1, 0.04355483, 0, 0, -0.99905103, 0.16666667, 1, 0.20854394, 0, 0, -0.978013, 0.2, 1, 0.3387379, 0, 0, -0.9408808, 0.23333333, 1, 0.41251555, 0, 0, -0.9109506, 0.26666668, 1, 0.41251564, 0, 0, -0.91095054, 0.3, 1, 0.33873788, 0, 0, -0.9408808, 0.33333334, 1, 0.20854388, 0, 0, -0.97801304, 0.36666667, 1, 0.043554798, 0, 0, -0.99905103, 0.4, 1, -0.12879558, 0, 0, -0.99167114, 0.43333334, 1, -0.27948773, 0, 0, -0.9601493, 0.5, 1, -0.4226183, 0, 0, -0.9063078)
+tracks/4/type = "rotation_3d"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("animal-caterpillar/root/leg-back-right")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0.42261833, 0, 0, -0.9063079, 0.033333335, 1, 0.38381788, 0, 0, -0.92340887, 0.06666667, 1, 0.27948767, 0, 0, -0.9601493, 0.1, 1, 0.1287956, 0, 0, -0.99167114, 0.13333334, 1, -0.04355483, 0, 0, -0.99905103, 0.16666667, 1, -0.20854394, 0, 0, -0.978013, 0.2, 1, -0.3387379, 0, 0, -0.9408808, 0.23333333, 1, -0.41251555, 0, 0, -0.9109506, 0.26666668, 1, -0.41251564, 0, 0, -0.91095054, 0.3, 1, -0.33873788, 0, 0, -0.9408808, 0.33333334, 1, -0.20854388, 0, 0, -0.97801304, 0.36666667, 1, -0.043554798, 0, 0, -0.99905103, 0.4, 1, 0.12879558, 0, 0, -0.99167114, 0.43333334, 1, 0.27948773, 0, 0, -0.9601493, 0.5, 1, 0.4226183, 0, 0, -0.9063078)
+tracks/5/type = "position_3d"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("animal-caterpillar/root")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.017540742, 0, 0.06666667, 1, 0, 0.054992594, 0, 0.1, 1, 0, 0.08960001, 0, 0.13333334, 1, 0, 0.09872592, 0, 0.16666667, 1, 0, 0.07407407, 0, 0.2, 1, 0, 0.035199992, 0, 0.23333333, 1, 0, 0.004859261, 0, 0.26666668, 1, 0, 0.004859267, 0, 0.3, 1, 0, 0.03520002, 0, 0.33333334, 1, 0, 0.07407409, 0, 0.36666667, 1, 0, 0.09872594, 0, 0.4, 1, 0, 0.08959998, 0, 0.43333334, 1, 0, 0.054992583, 0, 0.5, 1, 0, 0, 0)
+tracks/6/type = "rotation_3d"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("animal-caterpillar/root")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgqql"]
+_data = {
+&"run": SubResource("Animation_v0iea"),
+&"static": SubResource("Animation_cvnsp"),
+&"walk": SubResource("Animation_6t5aa")
+}
+
 [sub_resource type="Animation" id="Animation_poun3"]
 resource_name = "Esqueleto|idle"
 length = 0.9583333
@@ -195,172 +361,6 @@ bind/21/name = &"R.foot_end_020"
 bind/21/bone = -1
 bind/21/pose = Transform3D(99.99999, 0, 0, 0, 100, 0, 0, 0, 100.00001, 0, 0, 0)
 
-[sub_resource type="Animation" id="Animation_v0iea"]
-resource_name = "run"
-length = 0.25
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("animal-caterpillar/root/body")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -0.052335963, 0, 0, -0.99862957, 0.033333335, 1, -0.033591267, 0, 0, -0.99943566, 0.06666667, 1, 0.0047996407, 0, 0, -0.9999885, 0.1, 1, 0.039259817, 0, 0, -0.9992291, 0.13333334, 1, 0.047978126, 0, 0, -0.99884844, 0.16666667, 1, 0.023995971, 0, 0, -0.99971217, 0.2, 1, -0.010471787, 0, 0, -0.99994516, 0.25, 1, -0.052335963, 0, 0, -0.99862957)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("animal-caterpillar/root/leg-front-left")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.64278764, 0, 0, -0.7660445, 0.033333335, 1, 0.43313476, 0, 0, -0.90132916, 0.06666667, 1, -0.06395179, 0, 0, -0.99795306, 0.1, 1, -0.5, 0, 0, -0.86602545, 0.13333334, 1, -0.59715855, 0, 0, -0.80212325, 0.16666667, 1, -0.3145447, 0, 0, -0.94924265, 0.2, 1, 0.13917315, 0, 0, -0.9902681, 0.25, 1, 0.64278764, 0, 0, -0.7660445)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("animal-caterpillar/root/leg-front-right")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0.64278764, 0, 0, -0.7660445, 0.033333335, 1, 0.43313476, 0, 0, -0.90132916, 0.06666667, 1, -0.06395179, 0, 0, -0.99795306, 0.1, 1, -0.5, 0, 0, -0.86602545, 0.13333334, 1, -0.59715855, 0, 0, -0.80212325, 0.16666667, 1, -0.3145447, 0, 0, -0.94924265, 0.2, 1, 0.13917315, 0, 0, -0.9902681, 0.25, 1, 0.64278764, 0, 0, -0.7660445)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("animal-caterpillar/root/leg-back-left")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, -0.64278764, 0, 0, -0.7660445, 0.033333335, 1, -0.43313476, 0, 0, -0.90132916, 0.06666667, 1, 0.06395179, 0, 0, -0.99795306, 0.1, 1, 0.5, 0, 0, -0.86602545, 0.13333334, 1, 0.59715855, 0, 0, -0.80212325, 0.16666667, 1, 0.3145447, 0, 0, -0.94924265, 0.2, 1, -0.13917315, 0, 0, -0.9902681, 0.25, 1, -0.64278764, 0, 0, -0.7660445)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("animal-caterpillar/root/leg-back-right")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, -0.64278764, 0, 0, -0.7660445, 0.033333335, 1, -0.43313476, 0, 0, -0.90132916, 0.06666667, 1, 0.06395179, 0, 0, -0.99795306, 0.1, 1, 0.5, 0, 0, -0.86602545, 0.13333334, 1, 0.59715855, 0, 0, -0.80212325, 0.16666667, 1, 0.3145447, 0, 0, -0.94924265, 0.2, 1, -0.13917315, 0, 0, -0.9902681, 0.25, 1, -0.64278764, 0, 0, -0.7660445)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("animal-caterpillar/root")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.080000006, 0, 0.06666667, 1, 0, 0.14125, 0, 0.1, 1, 0, 0.0675, 0, 0.13333334, 1, 0, -0.0025000023, 0, 0.16666667, 1, 0, -0.0062499987, 0, 0.2, 1, 0, 0, 0, 0.25, 1, 0, 0, 0)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("animal-caterpillar/root")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
-[sub_resource type="Animation" id="Animation_cvnsp"]
-resource_name = "static"
-length = 0.1
-tracks/0/type = "position_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("animal-caterpillar/root")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("animal-caterpillar/root")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("animal-caterpillar/root/leg-front-right")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("animal-caterpillar/root/leg-front-left")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("animal-caterpillar/root/leg-back-right")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
-tracks/5/type = "rotation_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("animal-caterpillar/root/leg-back-left")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("animal-caterpillar/root/body")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, -1)
-
-[sub_resource type="Animation" id="Animation_6t5aa"]
-resource_name = "walk"
-length = 0.5
-tracks/0/type = "rotation_3d"
-tracks/0/imported = true
-tracks/0/enabled = true
-tracks/0/path = NodePath("animal-caterpillar/root/body")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.0012179748, 0.034878235, -0.034878235, -0.99878204, 0.033333335, 1, 0.0009928149, 0.031493317, -0.031493317, -0.99900717, 0.06666667, 1, 0.00051342556, 0.022653079, -0.022653079, -0.9994866, 0.1, 1, 0.00010675371, 0.010331616, -0.010331616, -0.99989325, 0.13333334, 1, 1.2148599e-05, -0.0034854629, 0.0034854629, -0.99998784, 0.16666667, 1, 0.00028244447, -0.016803712, 0.016803712, -0.9997176, 0.2, 1, 0.0007641077, -0.027631935, 0.027631935, -0.9992359, 0.23333333, 1, 0.001156718, -0.033990882, 0.033990882, -0.9988434, 0.26666668, 1, 0.0011567177, -0.033990875, 0.033990875, -0.9988433, 0.3, 1, 0.00076410733, -0.02763193, 0.02763193, -0.9992359, 0.33333334, 1, 0.0002824443, -0.016803706, 0.016803706, -0.9997176, 0.36666667, 1, 1.2148557e-05, -0.0034854568, 0.0034854568, -0.99998784, 0.4, 1, 0.00010675384, 0.010331617, -0.010331617, -0.9998933, 0.43333334, 1, 0.00051342585, 0.022653082, -0.022653082, -0.99948657, 0.5, 1, 0.0012179748, 0.034878235, -0.034878235, -0.99878204)
-tracks/1/type = "rotation_3d"
-tracks/1/imported = true
-tracks/1/enabled = true
-tracks/1/path = NodePath("animal-caterpillar/root/leg-front-left")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 0.42261833, 0, 0, -0.9063079, 0.033333335, 1, 0.38381788, 0, 0, -0.92340887, 0.06666667, 1, 0.27948767, 0, 0, -0.9601493, 0.1, 1, 0.1287956, 0, 0, -0.99167114, 0.13333334, 1, -0.04355483, 0, 0, -0.99905103, 0.16666667, 1, -0.20854394, 0, 0, -0.978013, 0.2, 1, -0.3387379, 0, 0, -0.9408808, 0.23333333, 1, -0.41251555, 0, 0, -0.9109506, 0.26666668, 1, -0.41251564, 0, 0, -0.91095054, 0.3, 1, -0.33873788, 0, 0, -0.9408808, 0.33333334, 1, -0.20854388, 0, 0, -0.97801304, 0.36666667, 1, -0.043554798, 0, 0, -0.99905103, 0.4, 1, 0.12879558, 0, 0, -0.99167114, 0.43333334, 1, 0.27948773, 0, 0, -0.9601493, 0.5, 1, 0.4226183, 0, 0, -0.9063078)
-tracks/2/type = "rotation_3d"
-tracks/2/imported = true
-tracks/2/enabled = true
-tracks/2/path = NodePath("animal-caterpillar/root/leg-front-right")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = PackedFloat32Array(0, 1, -0.42261833, 0, 0, -0.9063079, 0.033333335, 1, -0.38381788, 0, 0, -0.92340887, 0.06666667, 1, -0.27948767, 0, 0, -0.9601493, 0.1, 1, -0.1287956, 0, 0, -0.99167114, 0.13333334, 1, 0.04355483, 0, 0, -0.99905103, 0.16666667, 1, 0.20854394, 0, 0, -0.978013, 0.2, 1, 0.3387379, 0, 0, -0.9408808, 0.23333333, 1, 0.41251555, 0, 0, -0.9109506, 0.26666668, 1, 0.41251564, 0, 0, -0.91095054, 0.3, 1, 0.33873788, 0, 0, -0.9408808, 0.33333334, 1, 0.20854388, 0, 0, -0.97801304, 0.36666667, 1, 0.043554798, 0, 0, -0.99905103, 0.4, 1, -0.12879558, 0, 0, -0.99167114, 0.43333334, 1, -0.27948773, 0, 0, -0.9601493, 0.5, 1, -0.4226183, 0, 0, -0.9063078)
-tracks/3/type = "rotation_3d"
-tracks/3/imported = true
-tracks/3/enabled = true
-tracks/3/path = NodePath("animal-caterpillar/root/leg-back-left")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = PackedFloat32Array(0, 1, -0.42261833, 0, 0, -0.9063079, 0.033333335, 1, -0.38381788, 0, 0, -0.92340887, 0.06666667, 1, -0.27948767, 0, 0, -0.9601493, 0.1, 1, -0.1287956, 0, 0, -0.99167114, 0.13333334, 1, 0.04355483, 0, 0, -0.99905103, 0.16666667, 1, 0.20854394, 0, 0, -0.978013, 0.2, 1, 0.3387379, 0, 0, -0.9408808, 0.23333333, 1, 0.41251555, 0, 0, -0.9109506, 0.26666668, 1, 0.41251564, 0, 0, -0.91095054, 0.3, 1, 0.33873788, 0, 0, -0.9408808, 0.33333334, 1, 0.20854388, 0, 0, -0.97801304, 0.36666667, 1, 0.043554798, 0, 0, -0.99905103, 0.4, 1, -0.12879558, 0, 0, -0.99167114, 0.43333334, 1, -0.27948773, 0, 0, -0.9601493, 0.5, 1, -0.4226183, 0, 0, -0.9063078)
-tracks/4/type = "rotation_3d"
-tracks/4/imported = true
-tracks/4/enabled = true
-tracks/4/path = NodePath("animal-caterpillar/root/leg-back-right")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = PackedFloat32Array(0, 1, 0.42261833, 0, 0, -0.9063079, 0.033333335, 1, 0.38381788, 0, 0, -0.92340887, 0.06666667, 1, 0.27948767, 0, 0, -0.9601493, 0.1, 1, 0.1287956, 0, 0, -0.99167114, 0.13333334, 1, -0.04355483, 0, 0, -0.99905103, 0.16666667, 1, -0.20854394, 0, 0, -0.978013, 0.2, 1, -0.3387379, 0, 0, -0.9408808, 0.23333333, 1, -0.41251555, 0, 0, -0.9109506, 0.26666668, 1, -0.41251564, 0, 0, -0.91095054, 0.3, 1, -0.33873788, 0, 0, -0.9408808, 0.33333334, 1, -0.20854388, 0, 0, -0.97801304, 0.36666667, 1, -0.043554798, 0, 0, -0.99905103, 0.4, 1, 0.12879558, 0, 0, -0.99167114, 0.43333334, 1, 0.27948773, 0, 0, -0.9601493, 0.5, 1, 0.4226183, 0, 0, -0.9063078)
-tracks/5/type = "position_3d"
-tracks/5/imported = true
-tracks/5/enabled = true
-tracks/5/path = NodePath("animal-caterpillar/root")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.033333335, 1, 0, 0.017540742, 0, 0.06666667, 1, 0, 0.054992594, 0, 0.1, 1, 0, 0.08960001, 0, 0.13333334, 1, 0, 0.09872592, 0, 0.16666667, 1, 0, 0.07407407, 0, 0.2, 1, 0, 0.035199992, 0, 0.23333333, 1, 0, 0.004859261, 0, 0.26666668, 1, 0, 0.004859267, 0, 0.3, 1, 0, 0.03520002, 0, 0.33333334, 1, 0, 0.07407409, 0, 0.36666667, 1, 0, 0.09872594, 0, 0.4, 1, 0, 0.08959998, 0, 0.43333334, 1, 0, 0.054992583, 0, 0.5, 1, 0, 0, 0)
-tracks/6/type = "rotation_3d"
-tracks/6/imported = true
-tracks/6/enabled = true
-tracks/6/path = NodePath("animal-caterpillar/root")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = PackedFloat32Array(0, 1, 0, 0, 0, 1)
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgqql"]
-_data = {
-&"run": SubResource("Animation_v0iea"),
-&"static": SubResource("Animation_cvnsp"),
-&"walk": SubResource("Animation_6t5aa")
-}
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cvnsp"]
 radius = 0.30029297
 height = 0.60058594
@@ -375,6 +375,27 @@ script = ExtResource("1_cvnsp")
 [node name="animal-caterpillar2" parent="." unique_id=842720335 instance=ExtResource("1_v0iea")]
 unique_name_in_owner = true
 transform = Transform3D(-0.2, 0, 3.019916e-08, 0, 0.2, 0, -3.019916e-08, 0, -0.2, 0, 0, 0)
+
+[node name="animal-caterpillar" parent="animal-caterpillar2" index="0" unique_id=1654363022]
+visible = false
+
+[node name="leg-front-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="0" unique_id=67322948]
+transform = Transform3D(1, 0, 0, 0, 0.1736482, 0.98480755, 0, -0.98480755, 0.1736482, -0.25, 0.3, 0.25)
+
+[node name="leg-front-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="1" unique_id=916332053]
+transform = Transform3D(1, 0, 0, 0, 0.1736482, 0.98480755, 0, -0.98480755, 0.1736482, 0.25, 0.3, 0.25)
+
+[node name="leg-back-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="2" unique_id=771341119]
+transform = Transform3D(1, 0, 0, 0, 0.1736482, -0.98480755, 0, 0.98480755, 0.1736482, -0.25, 0.3, -0.25)
+
+[node name="leg-back-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="3" unique_id=1744956006]
+transform = Transform3D(1, 0, 0, 0, 0.1736482, -0.98480755, 0, 0.98480755, 0.1736482, 0.25, 0.3, -0.25)
+
+[node name="body" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="4" unique_id=2081161047]
+transform = Transform3D(1, 0, 0, 0, 0.9945219, -0.10452846, 0, 0.10452846, 0.9945219, 1.573182e-08, 0.18124998, -3.8083503e-08)
+
+[node name="AnimationPlayer" parent="animal-caterpillar2" index="1" unique_id=593302426]
+libraries/ = SubResource("AnimationLibrary_vgqql")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="animal-caterpillar2" unique_id=1341543380]
 root_node = NodePath("../Sketchfab_Scene")
@@ -564,27 +585,6 @@ skeleton = NodePath("..")
 
 [node name="Object_8" type="Node3D" parent="animal-caterpillar2/Sketchfab_Scene/Sketchfab_model/8a81dded46634da88a6dc51c5f086402_fbx/Object_2/RootNode/Esqueleto/Object_6" unique_id=1951122908]
 transform = Transform3D(-99.999985, 0.0011987042, 0.046855636, 0.0468572, 0.13453272, 99.9999, 0.0011356667, 99.99991, -0.13453327, -5.820766e-09, -1.00375255e-05, 1.1641533e-08)
-
-[node name="animal-caterpillar" parent="animal-caterpillar2" index="2" unique_id=1654363022]
-visible = false
-
-[node name="leg-front-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="0" unique_id=67322948]
-transform = Transform3D(1, 0, 0, 0, 0.1736482, 0.98480755, 0, -0.98480755, 0.1736482, -0.25, 0.3, 0.25)
-
-[node name="leg-front-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="1" unique_id=916332053]
-transform = Transform3D(1, 0, 0, 0, 0.1736482, 0.98480755, 0, -0.98480755, 0.1736482, 0.25, 0.3, 0.25)
-
-[node name="leg-back-right" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="2" unique_id=771341119]
-transform = Transform3D(1, 0, 0, 0, 0.1736482, -0.98480755, 0, 0.98480755, 0.1736482, -0.25, 0.3, -0.25)
-
-[node name="leg-back-left" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="3" unique_id=1744956006]
-transform = Transform3D(1, 0, 0, 0, 0.1736482, -0.98480755, 0, 0.98480755, 0.1736482, 0.25, 0.3, -0.25)
-
-[node name="body" parent="animal-caterpillar2/animal-caterpillar/root" parent_id_path=PackedInt32Array(842720335, 827963564) index="4" unique_id=2081161047]
-transform = Transform3D(1, 0, 0, 0, 0.9945219, -0.10452846, 0, 0.10452846, 0.9945219, 1.573182e-08, 0.18124998, -3.8083503e-08)
-
-[node name="AnimationPlayer" parent="animal-caterpillar2" index="3" unique_id=593302426]
-libraries/ = SubResource("AnimationLibrary_vgqql")
 
 [node name="RayCast3D" type="RayCast3D" parent="animal-caterpillar2" unique_id=869731500]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 1.1060867e-07, 0.79475224, 0.7325281)
